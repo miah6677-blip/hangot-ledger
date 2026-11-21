@@ -93,8 +93,8 @@ main.gut{padding-block:14px 150px;display:flex;flex-direction:column;gap:12px}
 .soon ul{margin:0;padding-left:18px;color:var(--muted);font-size:.92rem}
 .fab{position:fixed;z-index:8;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(76px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;border:0;background:var(--accent);color:var(--accent-ink);font-size:2rem;line-height:1;box-shadow:0 4px 14px var(--scrim)}
 .nav{position:fixed;z-index:8;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
-.nav .gut{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
-.nav button{min-height:60px;border:0;background:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:.74rem;color:var(--muted)}
+.nav .gut{display:grid;grid-template-columns:repeat(6,minmax(0,1fr))}
+.nav button{min-height:60px;border:0;background:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:.68rem;color:var(--muted)}
 .nav button svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .nav button[aria-current="page"]{color:var(--accent);font-weight:700}
 .scrim{position:fixed;inset:0;z-index:20;background:var(--scrim);display:flex;align-items:flex-end;justify-content:center}
@@ -178,7 +178,7 @@ body.locked>*:not(#lock){visibility:hidden}
 .dhead:first-child{border-top:0;margin-top:0;padding-top:2px}
 .dhead b{font-size:.86rem;font-weight:600;white-space:nowrap}
 .dhead span{font-size:.78rem;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums;overflow:hidden;text-overflow:ellipsis}
-.lrow{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:8px;width:100%;min-height:46px;padding:7px 0;border:0;border-top:1px solid var(--line);background:none;text-align:left;color:inherit}
+.lrow{display:grid;grid-template-columns:4.9em minmax(0,1fr) auto;align-items:center;gap:8px;width:100%;min-height:46px;padding:7px 0;border:0;border-top:1px solid var(--line);background:none;text-align:left;color:inherit}
 .lrow:first-of-type{border-top:0}
 .lrow .bd{font-size:.7rem;font-weight:700;line-height:1.6;padding:1px 7px;border-radius:7px;max-width:9em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:var(--soft);color:var(--accent)}
 .lrow .bd.inc{background:rgba(31,95,184,.13);color:var(--inc)}
@@ -187,6 +187,14 @@ body.locked>*:not(#lock){visibility:hidden}
 .lrow .tx{min-width:0;display:flex;flex-direction:column;gap:1px}
 .lrow .tx span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.95rem}
 .lrow .tx small{color:var(--muted);font-size:.74rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lrow .lc{display:flex;flex-direction:column;gap:1px;min-width:0;font-size:.7rem;color:var(--muted);line-height:1.32}
+.lrow .lc i{font-style:normal;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lrow .lc i:first-child{color:var(--ink);font-weight:600;font-size:.73rem;opacity:.9}
+.dhead .dl{display:flex;align-items:baseline;gap:6px;min-width:0}
+.dhead .dl b{font-size:.86rem}
+.dhead .dl i{font-style:normal;font-size:.7rem;color:var(--muted)}
+.dhead .sm{display:flex;gap:6px;align-items:baseline;font-variant-numeric:tabular-nums}
+.dhead .sm b{font-size:.8rem;font-weight:700}
 .lrow .am{font-variant-numeric:tabular-nums;font-weight:700;font-size:.95rem;white-space:nowrap;text-align:right}
 .lrow .am small{display:block;font-weight:400;font-size:.68rem;color:var(--muted)}
 .alertbar{display:flex;align-items:center;gap:8px;width:100%;min-height:42px;border:1.5px solid var(--accent);border-radius:12px;background:var(--soft);color:var(--accent);font-weight:700;padding:0 12px;font-size:.88rem;text-align:left}
@@ -204,6 +212,59 @@ body.locked>*:not(#lock){visibility:hidden}
 #savebar .acts2{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
 #savebar button{font:inherit;font-weight:700;border:0;border-radius:10px;background:#c62828;color:#fff;padding:8px 12px}
 #savebar button.alt{background:#fff;color:#8e1b1b;border:1.5px solid #c62828}
+#syncbar{margin:0 auto 8px;padding:11px 13px;border:1.5px solid #b26a00;border-radius:12px;background:#fff6e8;color:#7a4800;font-size:.9rem;line-height:1.5}
+#syncbar b{display:block;margin-bottom:3px;font-size:.95rem}
+#syncbar .acts2{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
+#syncbar button{font:inherit;font-weight:700;border:0;border-radius:10px;background:#b26a00;color:#fff;padding:8px 12px}
+#syncbar button.alt{background:#fff;color:#7a4800;border:1.5px solid #b26a00}
+.srow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.srow .sname{font-size:.95rem;font-weight:600}
+.srow .sstat{margin-left:auto;border:1.5px solid var(--line);background:none;color:var(--accent);border-radius:16px;padding:5px 12px;font-size:.82rem;font-weight:700}
+.srow .sstat.off{color:var(--muted)}
+.srow .sstat.bad{color:var(--exp);border-color:var(--exp)}
+.srow .sbtn{border:1.5px solid var(--line);background:none;color:var(--ink);border-radius:12px;min-height:38px;padding:0 12px;font-size:.85rem;font-weight:600}
+.crow{display:flex;align-items:center;gap:6px}
+.crow>div:first-child{flex:1;min-width:0;display:flex}
+.crow>div:first-child>*{flex:1;min-width:0}
+.cum{font-size:.7rem;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;padding-left:4px}
+.arow{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;align-items:center;border-top:1px solid var(--line);padding:6px 0}
+.arow:first-of-type{border-top:0}
+.arowb{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;border:0;background:none;text-align:left;min-height:44px;padding:0;color:inherit}
+.arowb .l{min-width:0;display:flex;flex-direction:column}
+.arowb .l span{overflow-wrap:anywhere;font-size:.95rem}
+.arowb .l small{color:var(--muted);font-size:.74rem}
+.arowb .r{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;font-size:.95rem}
+.acols{display:grid;grid-template-columns:auto auto;gap:10px;text-align:right}
+.acols span{min-width:5.6em}
+.acols b{display:block;font-variant-numeric:tabular-nums;font-size:.92rem;font-weight:700}
+.acols small{display:block;font-size:.66rem;color:var(--muted)}
+.amode{display:flex;gap:6px;flex-wrap:wrap}
+.amode button{min-height:40px;border-radius:11px;border:1.5px solid var(--line);background:var(--surface);font-size:.82rem;font-weight:600;padding:0 12px;color:var(--ink)}
+.amode button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.arow .mini{min-height:34px;border:1px solid var(--line);border-radius:9px;background:none;font-size:.78rem;padding:0 10px}
+.ord{display:flex;gap:4px}
+.ord button{width:34px;height:34px;border-radius:8px;border:1px solid var(--line);background:none;font-size:.8rem}
+.mtiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
+.mtile{display:flex;flex-direction:column;align-items:center;gap:5px;min-height:92px;border:0;background:none;border-radius:14px;padding:10px 4px;color:var(--ink)}
+.mtile:active{background:var(--bg)}
+.mtile svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;color:var(--muted)}
+.mtile b{font-weight:600;font-size:.86rem;text-align:center;word-break:keep-all}
+.mtile small{color:var(--accent);font-size:.7rem;font-weight:700;min-height:1em}
+/* ---- 편한가계부식 한 건씩 연속 검수 ---- */
+.rv{display:flex;flex-direction:column;gap:12px}
+.rv .rvhead{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.rv .rvhead b{font-size:1.05rem}
+.rv .rvrows{display:flex;flex-direction:column}
+.rv .rvrow{display:grid;grid-template-columns:64px minmax(0,1fr);gap:10px;align-items:center;border-bottom:1px solid var(--line);min-height:54px;padding:4px 0}
+.rv .rvrow:last-child{border-bottom:0}
+.rv .rvrow>b{font-size:.9rem;color:var(--muted);font-weight:600}
+.rv .rvrow .inbox{min-height:46px;background:none;border:0;border-radius:0;padding-right:0}
+.rv .rvrow .inbox input{text-align:left;font-size:1.05rem}
+.rv .rvrow .txt,.rv .rvrow .pick{border:0;background:none;padding:0;min-height:46px;font-size:1.02rem}
+.rv .rvraw{background:var(--bg);border-radius:12px;padding:12px;margin:0;color:var(--muted);font-size:.92rem;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere;max-height:10em;overflow-y:auto}
+.rv .rvfoot{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.25fr);gap:8px}
+.rv .rvfoot .btn{min-height:54px;padding:0 8px;white-space:nowrap}
+.lock .bio{margin-top:4px;min-height:50px;padding:0 22px;border-radius:14px;background:none;border:1.5px solid var(--line);font-weight:600}
 </style>
 
 <header class="top"><div class="gut">
@@ -213,6 +274,7 @@ body.locked>*:not(#lock){visibility:hidden}
   <div id="alerts"></div>
 </div></header>
 <div class="gut" id="savebar" role="alert" aria-live="assertive" hidden></div>
+<div class="gut" id="syncbar" role="alert" aria-live="polite" hidden></div>
 <main class="gut" id="view"></main>
 <button class="fab" id="fab" type="button" aria-label="내역 적기" hidden>＋</button>
 <nav class="nav" aria-label="메뉴"><div class="gut" id="nav"></div></nav>
@@ -334,6 +396,9 @@ body.locked>*:not(#lock){visibility:hidden}
   let moveErr=false,ready=false,mode="loading",col=null,dirty=new Set(),saving=false,timer=null,saveErr=false;
   let store="ls",storeWarn=false,storeMsg="",saveErrMsg="";   // store: "idb"(대용량) | "ls"(예전 방식) | "none"
   const S=x=>String(x==null?"":x);
+  // 문자·알림 연결용: 전화번호는 숫자만, 문자연결 키워드는 쉼표·줄바꿈으로 나누어 담아요.
+  const cleanKw=x=>{const a=Array.isArray(x)?x:S(x).split(/[,，\n\r·;]+/);
+    return [...new Set(a.map(t=>S(t).trim()).filter(Boolean).map(t=>t.slice(0,30)))].slice(0,12);};
   const cleanCat=c=>({id:S(c.id)||rid(),n:S(c.n).slice(0,20),k:c.k==="inc"?"inc":"exp",s:c.s==="ph"?"ph":"hm",...(c.ev?{ev:true}:{})});
   const cleanTags=a=>Array.isArray(a)?[...new Set(a.map(t=>S(t).trim().slice(0,16)).filter(Boolean))].slice(0,8):[];
   const cleanFixed=f=>({id:S(f.id)||rid(),n:S(f.n).slice(0,24),k:f.k==="inc"?"inc":"exp",a:Math.max(0,Math.round(Number(f.a)||0)),day:Math.min(31,Math.max(1,Math.round(Number(f.day)||1))),
@@ -344,7 +409,7 @@ body.locked>*:not(#lock){visibility:hidden}
     r:a.r==null||a.r===""||!isFinite(Number(a.r))?null:Math.max(0,Number(a.r)),rt:["pr","bul"].includes(a.rt)?a.rt:"eq",end:/^\d{4}-\d{2}$/.test(a.end)?a.end:"",start:/^\d{4}-\d{2}$/.test(a.start)?a.start:"",
     m:Math.max(0,Math.round(Number(a.m)||0)),pt:a.pt==="lump"?"lump":"reg",yrs:Math.max(0,Math.round(Number(a.yrs)||0)),paid:Math.max(0,Math.round(Number(a.paid)||0)),it:a.it==="var"?"var":"gen",
     cov:Array.isArray(a.cov)?a.cov.filter(x=>x).slice(0,40).map(x=>({n:S(x.n).slice(0,20),a:Math.max(0,Math.round(Number(x.a)||0))})):[],
-    hold:Array.isArray(a.hold)?a.hold.filter(x=>x&&x.n).slice(0,80).map(x=>({n:S(x.n).slice(0,30),q:Math.max(0,Number(x.q)||0),avg:Math.max(0,Number(x.avg)||0),cur:Math.max(0,Number(x.cur)||0)})):[]});
+    hold:Array.isArray(a.hold)?a.hold.filter(x=>x&&x.n).slice(0,80).map(x=>({n:S(x.n).slice(0,30),q:Math.max(0,Number(x.q)||0),avg:Math.max(0,Number(x.avg)||0),cur:Math.max(0,Number(x.cur)||0)})):[],smsPhone:S(a.smsPhone).replace(/[^\d]/g,"").slice(0,20),appMatch:S(a.appMatch).slice(0,24),smsKeywords:cleanKw(a.smsKeywords)});
   const cleanSnap=o=>{const r={};if(o&&typeof o==="object")for(const k in o)if(/^\d{4}-\d{2}$/.test(k)&&isFinite(Number(o[k])))r[k]=Math.round(Number(o[k]));return r;};
   function cleanTx(t){if(!t||!/^\d{4}-\d{2}-\d{2}$/.test(t.d))return null;const o={id:S(t.id)||rid(),d:t.d,k:t.k==="inc"?"inc":t.k==="tr"?"tr":"exp",a:t.card?Math.round(Number(t.a)||0):Math.max(0,Math.round(Number(t.a)||0)),
       cat:S(t.cat),s:t.k==="tr"?"tr":t.s==="ph"?"ph":"hm",memo:S(t.memo).slice(0,60),tags:cleanTags(t.tags)};
@@ -354,8 +419,8 @@ body.locked>*:not(#lock){visibility:hidden}
     if(t.card&&o.k==="exp"){o.card=S(t.card);if(/^\d{4}-\d{2}-\d{2}$/.test(t.ud))o.ud=t.ud;if(t.src)o.src=S(t.src).slice(0,6);if(t.nx)o.nx=true;if(t.ua!=null&&isFinite(Number(t.ua)))o.ua=Math.max(0,Math.round(Number(t.ua)));
       if(t.rem&&t.rem.n>0&&t.rem.bal>0)o.rem={n:Math.min(60,Math.round(Number(t.rem.n))),bal:Math.round(Number(t.rem.bal))};
       if(t.grp&&t.ins&&t.ins.n>1){o.grp=S(t.grp);o.ins={i:Math.round(Number(t.ins.i)||1),n:Math.round(Number(t.ins.n)||1),tot:Math.round(Number(t.ins.tot)||0)};}}return o;}
-  const cleanCard=c=>({id:S(c.id)||rid(),n:S(c.n).slice(0,16),day:Math.min(31,Math.max(1,Math.round(Number(c.day)||14))),off:c.off===-2?-2:-1,sd:Math.min(31,Math.max(1,Math.round(Number(c.sd)||1))),
-    acct:S(c.acct),bk:S(c.bk).slice(0,16),goal:Math.max(0,Math.round(Number(c.goal)||0)),bal:c.bal==null||c.bal===""?null:Math.max(0,Math.round(Number(c.bal)||0)),balAt:/^\d{4}-\d{2}-\d{2}$/.test(c.balAt)?c.balAt:""});
+  const cleanCard=c=>({hide:!!c.hide,id:S(c.id)||rid(),n:S(c.n).slice(0,16),day:Math.min(31,Math.max(1,Math.round(Number(c.day)||14))),off:c.off===-2?-2:-1,sd:Math.min(31,Math.max(1,Math.round(Number(c.sd)||1))),
+    acct:S(c.acct),bk:S(c.bk).slice(0,16),goal:Math.max(0,Math.round(Number(c.goal)||0)),bal:c.bal==null||c.bal===""?null:Math.max(0,Math.round(Number(c.bal)||0)),balAt:/^\d{4}-\d{2}-\d{2}$/.test(c.balAt)?c.balAt:"",smsPhone:S(c.smsPhone).replace(/[^\d]/g,"").slice(0,20),appMatch:S(c.appMatch).slice(0,24),smsKeywords:cleanKw(c.smsKeywords)});
   // 문자·알림 규칙: 글에 이 말이 들어 있으면 그 종류·항목·계좌로 바로 분류해요
   const cleanAutoRule=r=>({id:S(r.id)||rid(),kw:S(r.kw).trim().slice(0,30),app:S(r.app).slice(0,24),kind:r.kind==="inc"?"inc":r.kind==="tr"?"tr":"exp",
     cat:S(r.cat),acct:S(r.acct),to:S(r.to),card:S(r.card),memo:S(r.memo).slice(0,30)});
@@ -450,7 +515,7 @@ body.locked>*:not(#lock){visibility:hidden}
 
   // ---------- save ----------
   let writing=false,again=false,retryN=0,bkSaved=false;
-  function touch(id){dirty.add(id);clearTimeout(timer);timer=setTimeout(flush,600);setStatus();}
+  function touch(id){dirty.add(id);clearTimeout(timer);timer=setTimeout(flush,600);setStatus();noteLocal();}
   const bodyOf=id=>JSON.parse(JSON.stringify(id==="meta"?meta:mdoc(id.slice(2))));
   async function flush(){if(ready&&snapCheck())dirty.add("meta");
     if(mode==="local"){
@@ -486,11 +551,364 @@ body.locked>*:not(#lock){visibility:hidden}
     try{await verifyStored();}
     catch(e){saveErr=true;saveErrMsg=saveErrText(e);setStatus();drawSaveAlert();throw e;}
     drawSaveAlert();return liveCounts();}
-  function setStatus(){$("status").textContent=saveErr?(saveErrMsg||"저장하지 못했어요. 잠시 뒤 다시 고쳐 보세요."):
-    ({loading:"불러오는 중…",slow:"연결이 늦어요. 잠시만 기다려 주세요.",
+  function setStatus(){const base=({loading:"불러오는 중…",slow:"연결이 늦어요. 잠시만 기다려 주세요.",
       local:(writing||dirty.size)?"저장 중…":(store==="idb"?"이 기기에 저장됨 · 대용량":store==="ls"?"이 기기에 저장됨 · 5MB까지":"저장할 곳 없음"),
       dead:moveErr?"기록을 옮기지 못했어요. 페이지를 다시 열어 주세요.":"연결이 끊겼어요. 페이지를 다시 열어 주세요.",
-      cloud:(saving||dirty.size)?"저장 중…":"저장됨 · 공유한 사람과 같이 써요"})[mode]||"";}
+      cloud:(saving||dirty.size)?"저장 중…":"저장됨 · 공유한 사람과 같이 써요"})[mode]||"";
+    const sy=syncShort();$("status").textContent=saveErr?(saveErrMsg||"저장하지 못했어요. 잠시 뒤 다시 고쳐 보세요."):(sy?base+(base?" · ":"")+sy:base);}
+
+  // ---------- 기기 간 동기화 (구글 Apps Script 웹앱 + 또리 드라이브 파일) ----------
+  // 개인 주소(배포 ID·시트 ID·드라이브 폴더 ID)는 이 파일에 넣지 않아요.
+  // 이 브라우저에 저장된 구글 시트 웹앱 주소(localStorage)만 씁니다.
+  const SYNC_ON_KEY="ledger_sync", SYNC_DEV_KEY="ledger_device", SYNC_BASE_KEY="ledger_sync_base", SYNC_AT_KEY="ledger_sync_at";
+  let syncOn=ls.get(SYNC_ON_KEY)!=="0";
+  let syncBase=ls.get(SYNC_BASE_KEY)||"";
+  let syncDevice=ls.get(SYNC_DEV_KEY)||"";
+  let syncState="off";   // off | idle | wait | check | push | pull | ok | conflict | error  (WEBAPP_URL 은 아래쪽에서 정의되므로 부팅 때 켭니다)
+  let syncErr="", syncMsg="", syncAt=ls.get(SYNC_AT_KEY)||"", syncPeer="", syncServerTx=0;
+  let syncBusy=false, syncAgain=false, syncTimer=null, syncArmed=false, applyingRemote=false;
+  let localRev=0, sentRev=syncBase?0:-1;
+  function guessDevice(){const u=S(navigator.userAgent);
+    if(/iPhone/i.test(u))return "아이폰";if(/iPad/i.test(u))return "아이패드";
+    if(/Android/i.test(u))return /Mobile/i.test(u)?"안드로이드 폰":"안드로이드 태블릿";
+    if(/Windows/i.test(u))return "윈도우 PC";if(/Macintosh/i.test(u))return "맥";if(/Linux/i.test(u))return "리눅스 PC";
+    return "이 기기";}
+  const syncUrl=q=>WEBAPP_URL+(WEBAPP_URL.indexOf("?")>=0?"&":"?")+q;
+  const syncReady=()=>!!WEBAPP_URL&&syncOn&&mode==="local"&&ready;
+  const syncRevPending=()=>localRev!==sentRev;
+  function dtLabel(iso){const d=new Date(iso);if(!iso||isNaN(d.getTime()))return "";
+    return d.getFullYear()+". "+pad(d.getMonth()+1)+". "+pad(d.getDate())+". "+pad(d.getHours())+":"+pad(d.getMinutes());}
+  function syncText(){if(!WEBAPP_URL)return "시트 주소를 연결하면 켜져요";
+    if(!syncOn)return "꺼짐";
+    if(syncState==="off")return "켜짐";
+    if(syncState==="check")return "확인 중…";if(syncState==="push")return "올리는 중…";if(syncState==="pull")return "받는 중…";
+    if(syncState==="conflict")return "다른 기기 기록과 겹쳤어요";
+    if(syncState==="error")return "동기화하지 못했어요";
+    if(ready&&syncRevPending())return "올릴 기록이 있어요";
+    if(syncAt)return "맞춰져 있어요 · "+dtLabel(syncAt);
+    return "켜짐";}
+  function syncShort(){if(!syncOn||!WEBAPP_URL||mode!=="local")return "";
+    if(syncState==="check")return "동기화 확인 중…";if(syncState==="push")return "동기화 올리는 중…";if(syncState==="pull")return "동기화 받는 중…";
+    if(syncState==="conflict")return "동기화 확인 필요";if(syncState==="error")return "동기화 안 됨";
+    return "";}
+
+  function drawSyncBar(){const el=$("syncbar");if(!el)return;
+    if(!(WEBAPP_URL&&syncOn&&(syncState==="conflict"||syncState==="error"))){el.hidden=true;el.replaceChildren();return;}
+    const acts=[];
+    if(syncState==="error")acts.push(h("button",{type:"button",onclick:()=>{syncErr="";syncPush(false);}},"지금 동기화"));
+    acts.push(h("button",{class:syncState==="error"?"alt":"",type:"button",onclick:()=>{sub="sync";tab="more";ls.set("ledger_tab","more");window.scrollTo(0,0);render();}},syncState==="conflict"?"맞추는 방법 보기":"동기화 화면 열기"));
+    el.hidden=false;
+    el.replaceChildren(h("b",{text:syncState==="conflict"?"다른 기기와 기록이 겹쳤어요":"동기화하지 못했어요"}),
+      h("div",{text:syncState==="conflict"?(syncMsg||"어느 쪽 기록을 쓸지 골라 주세요."):(syncErr||"잠시 뒤 다시 해 보세요.")}),
+      h("div",{class:"acts2"},acts));}
+
+  function noteLocal(){
+    if(applyingRemote||!ready)return;
+    localRev++;
+    if(!syncArmed||!syncReady())return;
+    if(syncState==="conflict"){setStatus();drawSyncBar();return;}
+    syncState="wait";clearTimeout(syncTimer);syncTimer=setTimeout(()=>syncPush(false),1500);
+    setStatus();drawSyncBar();}
+
+  async function syncPush(force){
+    if(!WEBAPP_URL||!syncOn||mode!=="local")return false;
+    if(syncBusy){syncAgain=true;return false;}
+    if(!force&&localRev===sentRev)return false;
+    syncBusy=true;const ok=await doPush(force);syncBusy=false;setStatus();drawSyncBar();
+    if(syncAgain){syncAgain=false;if(syncState!=="conflict"&&syncRevPending())setTimeout(()=>syncPush(false),600);}
+    return ok;}
+
+  async function doPush(force){
+    clearTimeout(syncTimer);
+    syncState="push";syncErr="";setStatus();drawSyncBar();
+    const rev=localRev,stamp=new Date().toISOString();
+    let body="";
+    try{body=JSON.stringify({action:"sync_push",baseUpdatedAt:syncBase,updatedAt:stamp,device:syncDevice||guessDevice(),force:!!force,txCount:liveCounts().tx,
+      data:{app:"hangot-ledger",v:3,at:stamp,meta,months}});}
+    catch(e){syncState="error";syncErr="기록을 묶어 올리지 못했어요.";return false;}
+    try{
+      const r=await fetch(WEBAPP_URL,{method:"POST",cache:"no-store",redirect:"follow",headers:{"Content-Type":"text/plain;charset=utf-8"},body});
+      const j=await r.json();
+      if(j&&j.ok){
+        syncBase=S(j.updatedAt)||stamp;ls.set(SYNC_BASE_KEY,syncBase);sentRev=rev;
+        syncState="ok";syncErr="";syncMsg="";syncPeer="";syncServerTx=Number(j.txCount)||liveCounts().tx;
+        syncAt=new Date().toISOString();ls.set(SYNC_AT_KEY,syncAt);
+        return true;}
+      if(j&&j.conflict){
+        syncState="conflict";syncPeer=S(j.device);syncServerTx=Number(j.txCount)||0;
+        syncMsg="다른 기기("+(syncPeer||"이름 없음")+")에 "+won(syncServerTx)+"건이 먼저 올라가 있어요.";
+        return false;}
+      syncState="error";syncErr="서버가 저장을 거절했어요."+(j&&j.error?" ("+S(j.error)+")":"");
+      return false;
+    }catch(e){syncState="error";syncErr="인터넷 연결을 확인해 주세요.";return false;}}
+
+  async function syncPull(manual){
+    if(!WEBAPP_URL||!syncOn||mode!=="local")return false;
+    if(syncBusy){syncAgain=true;return false;}
+    syncBusy=true;const ok=await doPull(manual);syncBusy=false;setStatus();drawSyncBar();return ok;}
+
+  async function doPull(manual){
+    syncState="pull";setStatus();drawSyncBar();
+    try{
+      const r=await fetch(syncUrl("action=sync_pull&t="+Date.now()),{cache:"no-store"});
+      const j=await r.json();
+      if(!j||!j.ok)throw new Error("pull");
+      if(j.data&&j.data.meta&&j.data.months){
+        await adoptRemote(j.data);
+        syncBase=S(j.updatedAt);if(syncBase)ls.set(SYNC_BASE_KEY,syncBase);
+        syncServerTx=liveCounts().tx;sentRev=localRev;
+        syncState="ok";syncErr="";syncMsg="";syncPeer="";
+        syncAt=new Date().toISOString();ls.set(SYNC_AT_KEY,syncAt);
+        if(manual)toast("서버 기록으로 맞췄어요");
+        return true;}
+      syncBase="";ls.set(SYNC_BASE_KEY,"");syncServerTx=0;syncState="ok";
+      if(manual)toast("서버에 아직 기록이 없어요");
+      return true;
+    }catch(e){syncState="error";syncErr="기록을 받아오지 못했어요.";return false;}}
+
+  // 서버 기록을 이 기기에 그대로 옮겨 담고(사라진 달도 지움) IndexedDB에 저장한 뒤 화면을 새로 그립니다.
+  async function adoptRemote(o){
+    applyingRemote=true;
+    try{
+      const keep=new Set(Object.keys(o.months||{}));
+      for(const m in months)if(!keep.has(m))delete months[m];
+      adoptDoc("meta",o.meta);
+      for(const m in o.months||{})if(/^\d{4}-\d{2}$/.test(m))adoptDoc("m-"+m,o.months[m]);
+    }finally{applyingRemote=false;}
+    dirty.clear();dirty.add("meta");
+    try{await saveNow();}catch(e){}
+    render();}
+
+  async function syncCheck(manual){
+    if(!WEBAPP_URL||!syncOn||mode!=="local"||!ready)return false;
+    if(syncBusy){syncAgain=true;return false;}
+    if(!manual&&syncState==="conflict")return false;
+    syncBusy=true;syncState="check";setStatus();drawSyncBar();
+    let needPush=false,failed=false;
+    try{
+      const r=await fetch(syncUrl("action=sync_meta&t="+Date.now()),{cache:"no-store"});
+      const j=await r.json();
+      if(!j||!j.ok)throw new Error("meta");
+      const srv=S(j.updatedAt);
+      syncPeer=S(j.device);syncServerTx=Number(j.txCount)||0;
+      if(!srv){needPush=syncRevPending()&&allTx().length>0;}
+      else if(srv===syncBase){needPush=syncRevPending();}
+      else if(syncRevPending()&&allTx().length){
+        syncState="conflict";
+        syncMsg="다른 기기("+(syncPeer||"이름 없음")+")에 "+won(syncServerTx)+"건이 있고, 이 기기에도 아직 안 올린 기록이 있어요.";
+      }else{
+        syncBusy=false;const ok=await doPull(manual);syncBusy=false;syncArmed=true;
+        if(!ok&&syncState!=="error")syncState="ok";
+        setStatus();drawSyncBar();
+        return ok;}
+    }catch(e){failed=true;syncState="error";syncErr="서버 상태를 확인하지 못했어요.";}
+    syncBusy=false;syncArmed=true;
+    if(!failed&&syncState!=="conflict")syncState=needPush?"wait":"ok";
+    setStatus();drawSyncBar();
+    if(needPush)syncPush(false);
+    return false;}
+
+  async function syncBoot(){
+    if(!WEBAPP_URL||!syncOn||mode!=="local"){setStatus();drawSyncBar();return;}
+    if(syncState==="off")syncState="idle";
+    if(!syncDevice){syncDevice=guessDevice();ls.set(SYNC_DEV_KEY,syncDevice);}
+    if(syncRevPending())syncArmed=false;
+    await syncCheck(false);
+    syncArmed=true;
+    if(syncRevPending()&&syncState!=="conflict"&&syncState!=="error")syncPush(false);
+    setStatus();drawSyncBar();}
+
+  async function syncNow(){ if(!WEBAPP_URL||!syncOn){toast("구글 시트 주소를 먼저 연결해 주세요");sub="alerts";render();return;}
+    await syncCheck(true);
+    if(syncRevPending()&&syncState!=="conflict"&&syncState!=="error")await syncPush(false);
+    if(syncState==="ok")toast("동기화했어요");}
+  function viewSync(){const P=[back("더보기")],hasUrl=!!WEBAPP_URL;
+    const st=syncText();
+    const msg=syncState==="conflict"?(syncMsg||"어느 쪽 기록을 쓸지 골라 주세요.")
+      :syncState==="error"?(syncErr||"잠시 뒤 다시 해 보세요.")
+      :syncState==="push"?"기록을 구글 드라이브로 올리는 중이에요."
+      :syncState==="pull"?"구글 드라이브에서 기록을 받아오는 중이에요."
+      :syncState==="check"?"구글 드라이브에 더 새로운 기록이 있는지 확인 중이에요."
+      :(ready&&syncRevPending())?"바뀐 기록이 있어요. 잠시 뒤 저절로 올라가요."
+      :"폰·태블릿·PC 어디서 적어도 같은 기록으로 맞춰져요.";
+    const devIn=h("input",{class:"txt",id:"sync-dev",maxlength:"20",value:syncDevice||guessDevice(),placeholder:"예: 안드로이드 폰, 사무실 PC","aria-label":"이 기기 이름"});
+    devIn.addEventListener("change",()=>{const v=S(devIn.value).trim().slice(0,20);if(!v)return;syncDevice=v;ls.set(SYNC_DEV_KEY,v);toast("이 기기 이름을 바꿨어요");if(syncRevPending())noteLocal();else syncPush(true);});
+    const card=h("section",{class:"card"},h("div",{class:"card-head"},h("h2",{text:"기기 간 동기화"}),h("span",{class:"lab",text:hasUrl?(syncOn?"켜짐":"꺼짐"):"시트 주소 필요"})),
+      h("p",{class:"note",text:st}),h("p",{class:"lab",text:msg}),
+      h("p",{class:"hint",text:"서버: "+(syncServerTx?won(syncServerTx)+"건":(syncBase?"기록 있음":"아직 없음"))+(syncPeer?" · 마지막으로 바꾼 기기 "+syncPeer:"")+(syncAt?" · 이 기기 마지막 동기화 "+dtLabel(syncAt):"")}),
+      h("div",{class:"f"},h("label",{for:"sync-dev",text:"이 기기 이름"}),devIn));
+    const acts=h("section",{class:"card"},h("h2",{text:"지금 맞추기"}),
+      h("div",{class:"acts"},h("button",{class:"btn",type:"button",onclick:()=>{syncPush(false);toast("동기화를 시작했어요");}},"지금 올리기"),
+        h("button",{class:"btn line",type:"button",onclick:async e=>{const b=e.currentTarget;if(b.dataset.arm!=="1"){b.dataset.arm="1";b.textContent="한 번 더 누르면 서버 것으로";return;}b.dataset.arm="";b.textContent="서버 기록으로 맞추기";await syncPull(true);render();}},"서버 기록으로 맞추기")),
+      h("p",{class:"hint",text:"'지금 올리기'는 이 기기 기록을 구글 드라이브로 보내요. '서버 기록으로 맞추기'는 구글 드라이브에 있는 기록으로 이 기기를 덮어써요. 다른 기기에서 적은 것이 사라질 수 있으니 확인하고 눌러 주세요."}),
+      syncState==="conflict"?h("div",{class:"f"},h("p",{class:"err",text:"두 곳에 서로 다른 기록이 있어요. 어느 쪽을 남길지 골라 주세요."}),
+        h("div",{class:"acts"},h("button",{class:"btn line",type:"button",onclick:async e=>{const b=e.currentTarget;if(b.dataset.arm!=="1"){b.dataset.arm="1";b.textContent="한 번 더 누르면 이 기기 것으로";return;}b.dataset.arm="";b.textContent="이 기기 기록으로 맞추기";await syncPush(true);render();}},"이 기기 기록으로 맞추기"),
+          h("button",{class:"btn",type:"button",onclick:()=>syncPull(true)},"서버 기록 받기"))):null);
+    const onCard=h("section",{class:"card"},h("h2",{text:"자동으로 할 일"}),
+      h("label",{class:"switch"},(()=>{const c=h("input",{type:"checkbox",id:"sync-on",checked:!!syncOn});c.addEventListener("change",()=>{syncOn=c.checked;ls.set(SYNC_ON_KEY,syncOn?"1":"0");
+        if(syncOn){syncBoot();}else{clearTimeout(syncTimer);syncState="off";}render();});return c;})(),"켜기 (끄면 이 기기에만 저장해요)"),
+      h("p",{class:"hint",text:"켜 두면 앱을 열 때·다른 화면에서 돌아올 때 서버 기록과 맞추고, 내역을 적으면 1.5초 뒤 저절로 올려요."}),
+      h("p",{class:"hint",text:"매일 첫 동기화 때 구글 드라이브 또리 폴더 › 한곳가계부_자동백업 에 그날 기록을 한 장씩 저장해요. 최근 30일치를 남기고 오래된 것은 휴지통으로 보내요."}),
+      h("p",{class:"hint",text:"구글 시트 웹앱(Apps Script)을 v2로 올려야 이 기능이 켜져요. 올리기 전에는 '서버에 아직 기록이 없어요' 또는 연결 오류로 보일 수 있어요."}));
+    P.push(card);
+    if(!hasUrl)P.push(sheetConnectCard());
+    P.push(acts,onCard);return P;}
+
+  // ---------- 한 건씩 연속 검수 (편한가계부식) ----------
+  // 문자 규칙(카드명·끝4자리·발신자·키워드)으로 자산을 먼저 채우고,
+  // 고른 분류를 저장하면 그 가게(또는 발신 패턴) → 항목을 규칙으로 기억합니다.
+  let reviewSkip=new Set();
+  function paren4(s){const out=[];const re=/[\(\[]\s*(\d{4})\s*[\)\]]/g;const str=S(s);let m;while((m=re.exec(str)))out.push(m[1]);return out;}
+  function cardByDigits(txt){const d4=paren4(txt);if(!d4.length)return null;
+    return meta.cards.find(c=>d4.some(d=>S(c.n).replace(/\D/g,"").slice(-4)===d||S(c.n).replace(/\D/g,"").includes(d)))||null;}
+  function acctByDigits(txt){const d4=paren4(txt);if(!d4.length)return null;
+    return meta.accts.find(a=>d4.some(d=>S(a.n).replace(/\D/g,"").includes(d)))||null;}
+  function assetBySms(o){
+    const all=[...meta.cards.map(x=>({t:"card",x})),...meta.accts.map(x=>({t:"acct",x}))];
+    const raw=[o.title,o.text,o.memo].join(" "),phone=cfDigits([o.title,o.phone].filter(Boolean).join(" ")),rawD=cfDigits(raw);
+    let hit=all.find(e=>{const p=cfDigits(e.x.smsPhone);return p.length>=6&&(phone.indexOf(p)>=0||rawD.indexOf(p)>=0);});
+    if(!hit)hit=all.find(e=>{const a=norm(e.x.appMatch);return a.length>=2&&norm(o.app).indexOf(a)>=0;});
+    if(!hit)hit=all.find(e=>(e.x.smsKeywords||[]).some(k=>k&&norm(raw).indexOf(norm(k))>=0));
+    return hit||null;
+  }
+  function assetFrom(o){
+    const sm=assetBySms(o);
+    if(sm&&!(sm.t==="card"&&o.k!=="exp"))return sm.t==="card"?sm.x.id:"a:"+sm.x.id;
+    const raw=[o.app,o.title,o.text].join(" "),memo=S(o.memo);
+    if(o.k==="exp"){
+      const c=aliasHit(raw,meta.cards)||aliasHit(memo,meta.cards)||cardByDigits(raw);
+      if(c)return c.id;
+      if(meta.cards.length===1&&/승인|일시불|할부|카드/.test(raw))return meta.cards[0].id;
+    }
+    const a=aliasHit(raw,meta.accts)||aliasHit(memo,meta.accts)||acctByDigits(raw);
+    return a?"a:"+a.id:"";
+  }
+  function suggestCat(o){
+    if(catById(o.cat)&&catById(o.cat).k===o.k)return o.cat;
+    const memo=S(o.memo),k=keyOf(memo);
+    const r=(meta.autoRules||[]).find(x=>x.kw&&x.kind===o.k&&x.cat&&catById(x.cat)&&norm(memo).includes(norm(x.kw)));
+    if(r)return r.cat;
+    const r2=meta.rules.find(x=>x.to&&catById(x.to)&&catById(x.to).k===o.k&&k&&norm(memo).includes(norm(x.k)));
+    if(r2)return r2.to;
+    if(k.length>=2){const cnt=new Map();
+      allTx().forEach(t=>{if(t.k!==o.k||!catById(t.cat))return;if(keyOf(t.memo)===k)cnt.set(t.cat,(cnt.get(t.cat)||0)+1);});
+      let best="",n=0;cnt.forEach((v,c)=>{if(v>n){n=v;best=c;}});
+      if(best)return best;}
+    const ns=norm([o.memo,o.title,o.text].join(" "));
+    const named=meta.cats.find(c=>c.k===o.k&&c.n&&c.n.length>=2&&ns.includes(norm(c.n)));
+    return named?named.id:"";
+  }
+  function rememberKey(o){
+    const raw=[o.app,o.title,o.text].join(" "),nr=norm(raw),memoKey=keyOf(o.memo);
+    if(memoKey.length>=2){
+      if(nr.indexOf(norm(memoKey))>=0)return memoKey.slice(0,20);
+      const words=S(o.memo).split(/[\s,()\[\]·※*]+/).map(x=>x.replace(/[^\w가-힣]/g,"")).filter(x=>x.length>=2&&!/^(일시불|할부|승인|취소|사용|입금|출금|이체|카드|체크|총누적|잔액|원)$/.test(x));
+      words.sort((a,b)=>b.length-a.length);
+      const hit=words.find(w=>nr.indexOf(norm(w))>=0);
+      if(hit)return hit.slice(0,20);
+    }
+    const a=S(o.app).trim();if(a.length>=2&&!/^(문자|메시지|SMS|카카오톡|알림)$/.test(a))return a.slice(0,20);
+    const t=S(o.title).trim();return t.length>=2?t.slice(0,20):"";
+  }
+  function prepReview(o){
+    if(!Array.isArray(o.tags))o.tags=[];
+    if(o.remember===undefined)o.remember=true;
+    o.kw=rememberKey(o);
+    if(o.k==="tr"){if(!o.from&&S(o.pay).indexOf("a:")===0)o.from=S(o.pay).slice(2);if(!o.to&&S(o.pay).indexOf("a:")===0&&o.from)o.to="";}
+    else if(!o.pay)o.pay=assetFrom(o);
+    if(o.k!=="tr"&&!catById(o.cat))o.cat=suggestCat(o);
+    return o;
+  }
+  const reviewLeft=()=>alertPend().filter(o=>!reviewSkip.has(o.row));
+  function reviewEntry(pend){
+    if(!pend||!pend.length)return null;
+    return h("section",{class:"card hero"},
+      h("h2",{text:"한 건씩 검수하기"}),
+      h("p",{class:"lab",text:pend.length+"건이 기다리고 있어요. 자산은 문자에서 알아서 골랐어요. 분류만 골라 [저장]하면 다음부터 이 가게는 저절로 채워져요."}),
+      h("button",{class:"btn",type:"button",onclick:()=>{reviewSkip=new Set();sub="review";window.scrollTo(0,0);render();}},"검수 시작 ("+pend.length+")"));
+  }
+  function rvTags(o){
+    const inp=h("input",{class:"txt",id:"rv-tag",placeholder:"+ 태그 (쓰고 엔터)",maxlength:"16",style:"min-height:44px;flex:1;min-width:120px"});
+    const add=()=>{const v=S(inp.value).replace(/[#,]/g,"").trim();if(v&&o.tags.length<8&&o.tags.indexOf(v)<0){o.tags.push(v);render();}else inp.value="";};
+    inp.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===","){e.preventDefault();add();}});
+    inp.addEventListener("blur",()=>{if(S(inp.value).trim())add();});
+    return h("div",{class:"chips",style:"align-items:center"},
+      o.tags.map(g=>h("button",{class:"chip",type:"button","aria-pressed":"true","aria-label":g+" 태그 빼기",onclick:()=>{o.tags=o.tags.filter(x=>x!==g);render();}},"#"+g+" ×")),inp);
+  }
+  function saveReview(o){
+    o.memo=S(o.memo).trim();
+    if(!(o.a>0)){o.note="금액을 넣어 주세요.";render();return;}
+    if(o.k==="tr"){
+      if(!acctBy(o.from)||!acctBy(o.to)||o.from===o.to){o.note="보내는 곳과 받는 곳을 골라 주세요.";render();return;}
+    }else if(!catById(o.cat)){o.note="분류를 골라 주세요.";render();return;}
+    const kw=S(rememberKey(o)||o.kw).trim().slice(0,20);
+    o.kw=kw;
+    if(!applyAlert(o,false)){o.note=o.note||"저장하지 못했어요.";render();return;}
+    let remembered=false;
+    if(o.remember!==false&&kw.length>=2){ruleSave(o);remembered=true;}
+    alertMsg="한 건을 저장했어요.";
+    flushMarks();
+    reviewSkip.delete(o.row);
+    toast(remembered?"저장했어요 · 다음부터 '"+kw+"'는 이 항목으로":"저장했어요");
+    render();}
+  function reviewCard(o,n){
+    const kseg=seg([["inc","수입"],["exp","지출"],["tr","이체"]],o.k,v=>{o.k=v;o.cat="";if(v==="tr"){if(!o.from&&S(o.pay).indexOf("a:")===0)o.from=S(o.pay).slice(2);o.pay="";}
+      else{o.from="";o.to="";o.pay="";o.pay=assetFrom(o);}if(v!=="tr")o.cat=suggestCat(o);o.note="";render();},"수입·지출·이체");
+    const dt=h("input",{class:"txt",type:"date",id:"rv-date",value:o.d,"aria-label":"날짜",style:"min-height:46px"});dt.addEventListener("change",()=>{if(dt.value)o.d=dt.value;});
+    const amt=moneyInput("rv-amt",o.a,v=>{o.a=v;});
+    const memo=h("input",{class:"txt",id:"rv-memo",value:o.memo,placeholder:"어디서, 무엇을",maxlength:"40","aria-label":"내용",style:"min-height:46px"});
+    memo.addEventListener("input",()=>{o.memo=memo.value;});
+    const mk=(id,label,opts,val,on)=>{const e=h("select",{class:"pick",id,"aria-label":label},opts.map(([v,l])=>h("option",{value:v,text:l})));e.value=val;e.addEventListener("change",()=>on(e.value));return e;};
+    const rows=[];
+    rows.push(h("div",{class:"rvrow"},h("b",{text:"날짜"}),dt));
+    if(o.k==="tr"){
+      rows.push(h("div",{class:"rvrow"},h("b",{text:"보내는 곳"}),mk("rv-from","보내는 곳",[["","계좌 고르기"],...movable().map(a=>[a.id,a.n||"이름 없는 계좌"])],acctBy(o.from)?o.from:"",v=>{o.from=v;render();})));
+      rows.push(h("div",{class:"rvrow"},h("b",{text:"받는 곳"}),mk("rv-to","받는 곳",[["","계좌 고르기"],...movable().map(a=>[a.id,a.n||"이름 없는 계좌"])],acctBy(o.to)?o.to:"",v=>{o.to=v;render();})));
+    }else{
+      const opts=o.k==="exp"?[["","자산 고르기"],...spendable().map(a=>["a:"+a.id,a.n||"이름 없는 계좌"]),...meta.cards.map(c=>[c.id,c.n||"이름 없는 카드"])]
+        :[["","자산 고르기"],...spendable().map(a=>["a:"+a.id,a.n||"이름 없는 계좌"])];
+      rows.push(h("div",{class:"rvrow"},h("b",{text:"자산"}),mk("rv-asset","자산",opts,cardBy(o.pay)||acctBy(S(o.pay).slice(2))?o.pay:"",v=>{o.pay=v;render();})));
+      rows.push(h("div",{class:"rvrow"},h("b",{text:"분류"}),
+        mk("rv-cat","분류",[["","분류 고르기"],...meta.cats.filter(c=>c.k===o.k).map(c=>[c.id,(c.s==="ph"?"약국 · ":"생활 · ")+(c.n||"이름 없음")])],catById(o.cat)?o.cat:"",v=>{o.cat=v;o.note="";render();})));
+    }
+    rows.push(h("div",{class:"rvrow"},h("b",{text:"금액"}),amt));
+    rows.push(h("div",{class:"rvrow"},h("b",{text:"내용"}),memo));
+    const raw=[o.title,o.text].filter(Boolean).join("\n")||"(내용 없음)";
+    const rc=h("input",{type:"checkbox",id:"rv-once"});rc.addEventListener("change",()=>{o.remember=!rc.checked;});
+    return h("section",{class:"card rv"},
+      h("div",{class:"rvhead"},
+        h("button",{class:"ghost",type:"button",style:"padding-left:0",onclick:()=>{sub="alerts";render();}},"‹ 수집함"),
+        h("b",{text:o.k==="inc"?"수입":o.k==="tr"?"이체":"지출"}),
+        h("button",{class:"ghost",type:"button","aria-label":"검수 닫기",onclick:()=>{sub="alerts";render();}},"✕")),
+      kseg,
+      h("div",{class:"rvrows"},rows),
+      rvTags(o),
+      h("div",null,h("p",{class:"lab",text:"받은 문자 그대로"}),
+        h("pre",{class:"rvraw",text:raw}),
+        h("p",{class:"hint",text:(o.app||"보낸 곳 모름")+(o.tm?" · "+o.tm:"")+(o.rule?" · 기억한 규칙 '"+o.rule.kw+"'에 맞았어요":"")})),
+      o.note?h("p",{class:"err",role:"alert",text:o.note}):null,
+      h("div",{class:"rvfoot"},
+        h("button",{class:"btn line",type:"button",onclick:()=>{dropAlert(o);reviewSkip.delete(o.row);render();}},"🗑 삭제"),
+        h("button",{class:"btn line",type:"button",onclick:()=>{reviewSkip.add(o.row);render();}},"↳ 건너뛰기"),
+        h("button",{class:"btn",type:"button",onclick:()=>saveReview(o)},"저장 ("+n+")")),
+      h("label",{class:"switch",style:"min-height:36px;font-size:.82rem;color:var(--muted)"},rc,"이번 한 번만 저장 (다음부터 기억하지 않기)"),
+      h("p",{class:"hint",text:"저장하면 '"+(S(o.kw)||S(o.memo)||"이 내용")+"' → 이 분류로 기억해서, 다음에 같은 문자가 오면 자산과 분류가 저절로 채워져요."}));
+  }
+  function viewReview(){
+    const left=reviewLeft();
+    if(!left.length){
+      const rest=alertPend().length;
+      return [h("div",{class:"card-head"},h("button",{class:"ghost",type:"button",style:"padding-left:0",onclick:()=>{sub="alerts";render();}},"‹ 수집함")),
+        h("section",{class:"card"},h("h2",{text:rest?"검수 끝":"처리할 문자 없음"}),
+          h("p",{class:"empty",text:rest?"건너뛰어 둔 "+rest+"건이 남아 있어요.":"지금은 처리할 문자가 없어요."}),
+          h("div",{class:"acts"},
+            rest?h("button",{class:"btn",type:"button",onclick:()=>{reviewSkip=new Set();render();}},"건너뛴 것부터 다시"):null,
+            h("button",{class:"btn line",type:"button",onclick:()=>{sub="alerts";render();}},"수집함으로")))];
+    }
+    const o=prepReview(left[0]);
+    return [reviewCard(o,left.length)];
+  }
+
 
   // ---------- ui state ----------
   let tab=ls.get("ledger_tab")||"home";if(!["home","list","card","asset","more"].includes(tab))tab="home";
@@ -586,6 +1004,16 @@ body.locked>*:not(#lock){visibility:hidden}
       if(open)restA.forEach(x=>rows.push(line(x,DCOL[7],true)));}
     return[h("section",{class:"card"},h("div",{class:"card-head"},h("h2",{text:kind==="inc"?"수입 항목별":"지출 항목별"}),h("b",{class:kind==="inc"?"c-inc":"c-exp",text:won(net)+"원"})),
       h("div",{class:"dwrap"},wrap,h("div",{class:"dlist"},rows)),h("p",{class:"hint",text:"항목을 누르면 그 내역만 모아서 보여 줘요."}))];}
+  let statsKind="exp";
+  function viewStats(){const tx=txIn(ym).filter(done),inc=sum(tx,"inc"),exp=sum(tx,"exp"),P=[];
+    P.push(h("section",{class:"card hero"},h("div",{class:"pair"},
+      h("div",{class:"tile"},h("span",{class:"lab",text:"수입"}),h("b",{class:"c-inc",text:won(inc)+"원"})),
+      h("div",{class:"tile"},h("span",{class:"lab",text:"지출"}),h("b",{class:"c-exp",text:won(exp)+"원"}))),
+      h("p",{class:"lab",text:ymLabel(ym)+" · 수입 "+tx.filter(t=>t.k==="inc").length+"건 · 지출 "+tx.filter(t=>t.k==="exp").length+"건"})));
+    P.push(seg([["inc","수입"],["exp","지출"]],statsKind,v=>{statsKind=v;render();},"수입·지출 보기"));
+    const cc=catCard(tx,statsKind);
+    if(cc.length)P.push(...cc);else P.push(h("section",{class:"card"},h("p",{class:"empty",text:ymLabel(ym)+"에는 "+(statsKind==="inc"?"수입":"지출")+" 기록이 없어요. 달을 옮겨 보세요."})));
+    return P;}
   function viewHome(){const all0=txIn(ym),tx=all0.filter(done),pend=sum(all0.filter(t=>!done(t)),"exp"),inc=sum(tx,"inc"),exp=sum(tx,"exp"),left=inc-exp,P=[];
     const who=scope==="all"?"":SC[scope]+" ";
     P.push(h("section",{class:"card hero"},
@@ -627,15 +1055,14 @@ body.locked>*:not(#lock){visibility:hidden}
 
   function txLine(t,cardMode){
     const c=catById(t.cat),noCat=t.k!=="tr"&&!c;
-    const badge=t.k==="tr"?"이체":(noCat?"미분류":catName(t.cat));
-    const bcls=t.k==="tr"?"tr":(t.k==="inc"?"inc":"exp");
+    const big=t.k==="tr"?"이체":(noCat?"미분류":(c.s==="ph"?"약국":"생활"));
+    const sub2=t.k==="tr"?"":(noCat?"":(c.n||"이름 없음"));
     const main=t.k==="tr"?"이체":(t.memo||catName(t.cat)||"이름 없음");
-    const where=t.k==="tr"?(acctName(t.from)||"지워진 계좌")+" → "+(acctName(t.to)||"지워진 계좌"):(t.card?cardName(t.card):(t.acct?acctName(t.acct):""));
-    const extra=[t.k==="tr"?t.memo:where,isFix(t)?"고정":"",t.tags.length?"#"+t.tags.join(" #"):""].filter(Boolean).join(" · ");
+    const where=t.k==="tr"?(acctName(t.from)||"지워진 계좌")+" → "+(acctName(t.to)||"지워진 계좌"):(t.card?cardName(t.card):(t.acct?acctName(t.acct):"현금·기타"));
     const amtTxt=t.k==="inc"?"+"+won(t.a)+"원":t.k==="tr"?won(t.a)+"원":(t.a<0?"+"+won(-t.a)+"원 취소":"−"+won(t.a)+"원");
-    return h("button",{class:"lrow",type:"button","aria-label":badge+" "+main+" "+won(t.a)+"원. 눌러서 고치기",onclick:()=>openTx(t)},
-      h("span",{class:"bd "+bcls,text:badge}),
-      h("span",{class:"tx"},h("span",{text:main}),extra?h("small",{text:extra}):null),
+    return h("button",{class:"lrow",type:"button","aria-label":big+(sub2?" "+sub2:"")+" "+main+" "+won(t.a)+"원. 눌러서 고치기",onclick:()=>openTx(t)},
+      h("span",{class:"lc"},h("i",{text:big}),h("i",{text:sub2||"—"})),
+      h("span",{class:"tx"},h("span",{text:main}),h("small",{text:where+(isFix(t)?" · 고정":"")+(t.tags.length?" · "+t.tags.map(g=>"#"+g).join(" "):"")})),
       h("span",{class:"am "+(t.k==="inc"?"c-inc":t.k==="tr"?"c-muted":(t.a<0?"c-inc":"c-exp"))},amtTxt,
         t.ins?h("small",{text:"할부 "+t.ins.i+"/"+t.ins.n}):(!cardMode&&t.d>today()?h("small",{text:"예정"}):null)));
   }
@@ -686,7 +1113,11 @@ body.locked>*:not(#lock){visibility:hidden}
     const card=h("section",{class:"card",style:"gap:0;padding-top:6px;padding-bottom:6px"});
     [...groups.keys()].forEach(day=>{const dd=groups.get(day),di=sum(dd,"inc"),de=sum(dd,"exp"),dc=dd.filter(t=>t.card).reduce((s,t)=>s+t.a,0);
       const parts=cardMode?[dc?"카드 "+won(dc)+"원":""]:[di?"+"+won(di):"",de?"−"+won(de):""];
-      card.append(h("div",{class:"dhead"},h("b",{text:dLabel(day)+(day>today()?" · 예정":"")}),h("span",{text:parts.filter(Boolean).join(" · ")})));
+      const wd=WD[new Date(day+"T00:00:00").getDay()];
+      card.append(h("div",{class:"dhead"},
+        h("span",{class:"dl"},h("b",{text:(+day.slice(8))+" "+wd+"요일"}),h("i",{text:day.slice(0,4)+"."+day.slice(5,7)}),day>today()?h("i",{text:"예정"}):null),
+        h("span",{class:"sm"},cardMode?(dc?h("b",{class:"c-muted",text:"카드 "+won(dc)}):null):(di?h("b",{class:"c-inc",text:"+"+won(di)}):null),
+          !cardMode&&de?h("b",{class:"c-exp",text:" −"+won(de)}):null)));
       dd.forEach(t=>card.append(txLine(t,cardMode)));});
     P.push(card);return P;}
 
@@ -697,11 +1128,33 @@ body.locked>*:not(#lock){visibility:hidden}
   async function pinHash(salt,pin){const t=salt+":"+pin;try{const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(t));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("");}
     catch(e){let a=5381,c=52711;for(let i=0;i<t.length;i++){const ch=t.charCodeAt(i);a=(a*33)^ch;c=(c*33)^ch;}return"x"+(a>>>0).toString(16)+(c>>>0).toString(16);}}
   const okCfg=c=>c&&typeof c.h==="string"&&typeof c.salt==="string"&&c.h&&c.salt?{h:c.h,salt:c.salt}:null;
+  // ---------- 지문(생체인증, WebAuthn) ----------
+  let bioCfg=(()=>{try{const o=JSON.parse(ls.get("ledger_bio")||"null");return o&&o.id?o:null;}catch(e){return null;}})();
+  const bioStore=()=>{if(bioCfg)ls.set("ledger_bio",JSON.stringify(bioCfg));else ls.del("ledger_bio");};
+  const b64=b=>btoa(String.fromCharCode.apply(null,new Uint8Array(b)));
+  const ub64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+  const bioEnv=()=>{try{return location.protocol==="https:"||location.hostname==="localhost"||location.hostname==="127.0.0.1";}catch(e){return false;}};
+  async function bioAvail(){try{if(!bioEnv()||!window.PublicKeyCredential||!navigator.credentials)return false;
+    if(PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable)return await PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable();
+    return false;}catch(e){return false;}}
+  async function bioEnroll(){if(!bioEnv())throw new Error("https");
+    const ch=new Uint8Array(32);crypto.getRandomValues(ch);
+    const cred=await navigator.credentials.create({publicKey:{challenge:ch,rp:{name:"한곳 가계부",id:location.hostname},
+      user:{id:new TextEncoder().encode("hangot-"+today()),name:"한곳 가계부",displayName:"한곳 가계부"},
+      pubKeyCredParams:[{type:"public-key",alg:-7},{type:"public-key",alg:-257}],
+      authenticatorSelection:{authenticatorAttachment:"platform",userVerification:"required",residentKey:"preferred"},
+      timeout:60000,attestation:"none"}});
+    if(!cred||!cred.rawId)throw new Error("cancel");
+    bioCfg={id:b64(cred.rawId),at:new Date().toISOString()};bioStore();return true;}
+  async function bioCheck(){if(!bioCfg)return false;const ch=new Uint8Array(32);crypto.getRandomValues(ch);
+    const r=await navigator.credentials.get({publicKey:{challenge:ch,allowCredentials:[{type:"public-key",id:ub64(bioCfg.id)}],userVerification:"required",timeout:60000}});
+    return !!r;}
   async function saveLock(cfg){if(lockDoc){if(cfg)await lockDoc.set(cfg);else await lockDoc.delete();}else ls.set("ledger_lock",JSON.stringify(cfg));lockCfg=cfg;}
   function closePad(){$("lock").hidden=true;$("lock").replaceChildren();document.body.classList.remove("locked");padKey=null;}
   function pinPad(o){const el=$("lock");let v="",busy=false,msg=o.sub||"",err=false;
     const draw=()=>{el.replaceChildren(h("h2",{text:o.title}),h("p",{class:err?"err":"",role:"status",text:msg}),
       h("div",{class:"pdots","aria-label":"입력한 자리 "+v.length+"/4"},[0,1,2,3].map(i=>h("i",{class:i<v.length?"on":""}))),
+      ...(o.extra?[h("div",{style:"display:flex;justify-content:center;margin-bottom:6px"},o.extra)]:[]),
       h("div",{class:"pkeys"},["1","2","3","4","5","6","7","8","9"].map(k=>h("button",{type:"button",onclick:()=>press(k)},k)),
         o.cancel?h("button",{class:"sm",type:"button",onclick:()=>{closePad();if(o.oncancel)o.oncancel();}},"취소"):h("span"),
         h("button",{type:"button",onclick:()=>press("0")},"0"),h("button",{class:"sm",type:"button","aria-label":"한 자리 지우기",onclick:()=>press("del")},"지우기")));};
@@ -710,7 +1163,12 @@ body.locked>*:not(#lock){visibility:hidden}
     padKey=e=>{if(/^[0-9]$/.test(e.key))press(e.key);else if(e.key==="Backspace")press("del");};
     el.hidden=false;if(o.cover)document.body.classList.add("locked");draw();const f=el.querySelector("button");if(f)f.focus();}
   document.addEventListener("keydown",e=>{if(padKey){padKey(e);e.stopPropagation();}},true);
-  function showLock(){if(!lockCfg)return;pinPad({title:"한곳 가계부",sub:"비밀번호 4자리를 눌러 주세요",cover:true,done:async pin=>{
+  function showLock(){if(!lockCfg)return;
+    const bio=bioCfg?h("button",{class:"bio",type:"button",id:"bio-btn",onclick:async e=>{const b=e.currentTarget;b.disabled=true;
+      try{if(await bioCheck()){lockFails=0;awayAt=0;closePad();}else toast("지문을 확인하지 못했어요");}
+      catch(err){toast("지문을 쓸 수 없어요. 비밀번호로 풀어 주세요.");}
+      b.disabled=false;}},"🔒 지문으로 잠금 해제"):null;
+    pinPad({title:"비밀번호 입력",sub:"4자리 비밀번호를 눌러 주세요",cover:true,extra:bio,done:async pin=>{
     const wait=Math.ceil((lockUntil-Date.now())/1000);if(wait>0)return wait+"초 뒤에 다시 눌러 주세요.";
     if(await pinHash(lockCfg.salt,pin)===lockCfg.h){lockFails=0;awayAt=0;closePad();return null;}
     if(++lockFails>=5){lockFails=0;lockUntil=Date.now()+30000;return"5번 틀렸어요. 30초 뒤에 다시 눌러 주세요.";}return"비밀번호가 달라요. 다시 눌러 주세요.";}});}
@@ -719,14 +1177,25 @@ body.locked>*:not(#lock){visibility:hidden}
     closePad();toast("화면 잠금을 켰어요");render();return null;}});return null;}});}
   function askPin(title,then){pinPad({title,sub:"지금 쓰는 비밀번호 4자리",cancel:true,done:async pin=>{if(await pinHash(lockCfg.salt,pin)!==lockCfg.h)return"비밀번호가 달라요. 다시 눌러 주세요.";closePad();then();return null;}});}
   document.addEventListener("visibilitychange",()=>{if(document.hidden)awayAt=Date.now();else if(lockCfg&&awayAt&&Date.now()-awayAt>180000&&$("lock").hidden)showLock();});
+  // 앱으로 돌아오면 서버에 더 새 기록이 있는지 확인해 저절로 맞춥니다.
+  document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"&&ready&&mode==="local")syncCheck(false);});
+  window.addEventListener("online",()=>{if(ready&&mode==="local"&&syncRevPending())syncPush(false);});
+  setInterval(()=>{if(document.visibilityState==="visible"&&ready&&!syncBusy&&mode==="local"&&syncOn&&WEBAPP_URL)syncCheck(false);},60000);
   function viewLock(){const P=[back("더보기")];
-    P.push(h("section",{class:"card"},h("h2",{text:"화면 잠금"}),
+    P.push(h("section",{class:"card"},h("h2",{text:"앱 잠금 (비밀번호 4자리)"}),
       h("p",{class:"note",text:lockCfg?"켜져 있어요. 가계부를 열 때와, 다른 앱을 쓰다가 3분 넘게 지나 돌아올 때 비밀번호 4자리를 물어요.":"가계부를 열 때 비밀번호 4자리를 묻게 할 수 있어요. 폰을 잠깐 빌려주거나 화면이 켜져 있을 때 내역이 바로 보이지 않아요."}),
       lockCfg?h("div",{class:"acts"},h("button",{class:"btn line",type:"button",onclick:()=>askPin("잠금 끄기",async()=>{try{await saveLock(null);toast("화면 잠금을 껐어요");}catch(e){toast("끄지 못했어요. 잠시 뒤 다시 해 주세요");}render();})},"잠금 끄기"),
           h("button",{class:"btn",type:"button",onclick:()=>askPin("비밀번호 바꾸기",newPin)},"비밀번호 바꾸기"))
         :h("div",{class:"acts"},h("button",{class:"btn",type:"button",onclick:newPin},"비밀번호 만들기")),
       lockCfg?h("div",{class:"acts"},h("button",{class:"btn line",type:"button",onclick:showLock},"지금 잠그기")):null,
-      h("p",{class:"hint",text:"비밀번호는 사람마다 따로예요. 같이 쓰는 사람은 각자 자기 것을 정해요. 잊어버리면 Claude에게 '가계부 잠금 풀어 줘'라고 말해 주세요."})));
+      h("p",{class:"hint",text:"비밀번호는 이 브라우저에 SHA-256으로 바꿔 저장해요. 3분 넘게 다른 앱을 쓰다 돌아오면 다시 물어요."})));
+    P.push(h("section",{class:"card"},h("h2",{text:"지문으로 잠금 해제"}),
+      h("p",{class:"hint",text:"기기에 지문·얼굴을 등록해 두었다면 비밀번호 대신 생체인증으로 열 수 있어요. https 주소에서만 쓸 수 있고, 지원하지 않는 기기에서는 비밀번호를 써요."}),
+      bioCfg?h("div",{class:"acts"},h("button",{class:"btn line",type:"button",onclick:()=>{bioCfg=null;bioStore();render();toast("지문 잠금을 지웠어요");}},"지문 등록 지우기"))
+        :h("button",{class:"btn line",type:"button",onclick:async e=>{const b=e.currentTarget;b.disabled=true;
+          try{await bioEnroll();toast("지문을 등록했어요");}catch(err){toast(bioEnv()?"이 기기에서 지문을 쓸 수 없어요. 비밀번호를 써 주세요.":"https 주소에서만 지문을 쓸 수 있어요.");}
+          b.disabled=false;render();}},"지문 등록"),
+      h("p",{class:"lab",text:bioCfg?"지문을 등록했어요":"아직 등록하지 않았어요"})));
     return P;}
 
   // ---------- duplicate check: pairs that look like the same money written twice ----------
@@ -752,22 +1221,35 @@ body.locked>*:not(#lock){visibility:hidden}
       h("p",{class:"hint",text:(a.src||b.src)?"하나로 합치면 파일에서 가져온 쪽의 날짜·금액을 남기고, 직접 적은 쪽의 항목·태그·첨부를 옮겨요.":"하나로 합치면 위 내역을 남기고 아래 내역의 태그·첨부를 옮겨요."}))));
     return P;}
 
+  function moreSyncCard(){
+    const st=!WEBAPP_URL?"시트 주소 필요":!syncOn?"미사용":syncState==="conflict"?"확인 필요":syncState==="error"?"오류":syncState==="push"?"올리는 중":syncRevPending()?"올릴 기록 있음":"사용 중";
+    const cls=(syncState==="conflict"||syncState==="error")?"bad":(!WEBAPP_URL||!syncOn)?"off":"";
+    return h("section",{class:"card"},
+      h("div",{class:"card-head"},h("h2",{style:"font-size:1.1rem",text:"한곳 가계부"}),h("span",{class:"lab",text:syncDevice||guessDevice()})),
+      h("div",{class:"srow"},h("span",{class:"sname",text:"실시간 동기화"}),
+        h("button",{class:"sstat "+cls,type:"button",onclick:()=>{sub="sync";window.scrollTo(0,0);render();}},st+" ›"),
+        h("button",{class:"sbtn",type:"button",onclick:()=>syncNow()},"↻ 동기화")),
+      h("p",{class:"lab",text:syncAt?"마지막 동기화 "+dtLabel(syncAt):"아직 동기화한 적이 없어요"}));
+  }
   function viewMore(){
     if(sub==="ev")return viewEv();if(sub==="fx")return viewFixed();if(sub==="cat")return viewCats();if(sub==="hol")return viewHol();if(sub==="bk")return viewBackup();if(sub==="lock")return viewLock();if(sub==="dup")return viewDup();
-    if(sub==="alerts")return viewAlerts();if(sub==="rules")return viewRules();
+    if(sub==="alerts")return viewAlerts();if(sub==="rules")return viewRules();if(sub==="sync")return viewSync();if(sub==="review")return viewReview();
     const ev=allTx().filter(t=>t.ev&&t.d.startsWith(YM().slice(0,4))),fx=meta.fixed.filter(f=>f.on&&f.k==="exp");
-    const item=(id,n,d)=>h("button",{class:"rowbtn",type:"button",onclick:()=>{sub=id;render();}},h("span",{class:"l"},h("span",{text:n}),h("small",{text:d})),h("span",{class:"r c-muted",text:"›"}));
+    const item=(id,n,d,badge)=>h("button",{class:"mtile",type:"button",onclick:()=>{sub=id;window.scrollTo(0,0);render();}},
+      (()=>{const s=sv("svg",{viewBox:"0 0 24 24","aria-hidden":"true"});s.append(sv("path",{d:MICO[id]||MICO.more}));return s;})(),
+      h("b",{text:n}),(badge||d)?h("small",{text:badge||d}):null);
     const pending=alertPend().length;
-    return [h("section",{class:"card"},h("div",null,
-      item("alerts","실시간 알림 수집함",pending?"새로 온 "+pending+"건 · 확인해 주세요":(meta.sheetAt?"새로 온 문자·알림이 없어요":"문자·알림을 구글 시트에서 불러와요")),
-      item("rules","문자·알림 규칙",(meta.autoRules||[]).length?"기억한 규칙 "+(meta.autoRules||[]).length+"개 · 항목을 알아서 골라요":"한 번 고르면 다음부터 알아서 분류해요"),
-      item("ev","경조사 장부","올해 준 돈 "+short(sum(ev,"exp"))+"원 · 받은 돈 "+short(sum(ev,"inc"))+"원"),
-      item("fx","고정지출",(g=>g.length?Number(ym.slice(5))+"월 "+g.length+"건 · "+short(g.reduce((s,t)=>s+t.a,0))+"원":"월세·보험료·통신비처럼 매달 나가는 돈을 골라 한 번에 봐요")((months[ym]?months[ym].tx:[]).filter(isFix))),
-      item("bk","백업",meta.bkAt?"마지막 백업 "+fullD(meta.bkAt):"구글 드라이브나 파일로 기록을 따로 보관해요"),
-      item("dup","중복 점검",(n=>n?"겹쳐 보이는 내역 "+n+"쌍 · 확인이 필요해요":"겹쳐 보이는 내역이 없어요")(dupPairs().length)),
-      item("lock","화면 잠금",lockCfg?"켜짐 · 열 때 비밀번호 4자리를 물어요":"꺼짐 · 열 때 비밀번호를 묻게 할 수 있어요"),
-      item("cat","항목 관리","수입·지출 항목 이름과 약국/생활 구분"),
-      item("hol","쉬는 날","공휴일 확인과 임시공휴일 추가 · 카드 출금일 계산에 써요")))];}
+    return [moreSyncCard(),h("section",{class:"card"},h("div",{class:"mtiles"},
+      item("alerts","실시간 알림","",pending?pending+"건":(meta.sheetAt?"":"문자")),
+      item("rules","문자 규칙","",(meta.autoRules||[]).length?String((meta.autoRules||[]).length)+"개":""),
+      item("ev","경조사","",short(sum(ev,"exp"))+"원"),
+      item("fx","고정지출","",(g=>g.length?g.length+"건":"")((months[ym]?months[ym].tx:[]).filter(isFix))),
+      item("sync","기기 간 동기화","",syncOn?(syncState==="conflict"?"확인":syncState==="error"?"오류":""):"꺼짐"),
+      item("bk","백업/복원","",meta.bkAt?"오늘":"파일"),
+      item("dup","중복 점검","",(n=>n?n+"쌍":"")(dupPairs().length)),
+      item("lock","앱 잠금","",lockCfg?"켜짐":"꺼짐"),
+      item("cat","항목 관리","",""),
+      item("hol","쉬는 날","","")))];}
   const back=t=>h("button",{class:"ghost",type:"button",style:"align-self:flex-start;padding-left:0",onclick:()=>{sub="";render();}},"‹ "+t);
 
   function viewEv(){const P=[back("더보기")];
@@ -901,6 +1383,28 @@ body.locked>*:not(#lock){visibility:hidden}
     sel.addEventListener("change",()=>{if(sel.value==="__new"){ncf={key,name:"",s:"ph"};render();const el=$("nc-name");if(el)el.focus();return;}apply(catById(sel.value));});
     return h("div",{class:"impr",style:"margin-bottom:6px"+(catById(t.cat)?"":";box-shadow:inset 3px 0 0 var(--exp)")},h("div",{class:"impm"},h("span",{text:(t.ud?md(t.ud)+" ":"")+t.memo}),h("b",{text:won(t.a)+"원"})),
       ncf&&ncf.key===key?newCatForm(ncf,"exp",render,c=>{ncf=null;apply(c);},()=>{ncf=null;render();}):sel);}
+
+function card_period_range(c){const M=payMonth(c,today());return [cycStart(c,M),addDays(cycStart(c,shiftYM(M,1)),-1)];}
+function perLine(c){const [st,en]=card_period_range(c),f=d=>d.slice(2,4)+"."+d.slice(5,7)+"."+d.slice(8);
+  return h("p",{class:"note",text:"사용기간 "+f(st)+" ~ "+f(en)});}
+function cardPeriodCard(c){
+  const [st,en]=card_period_range(c),mine=allTx().filter(x=>x.card===c.id);
+  const per=mine.filter(x=>{const d=useD(x);return d>=st&&d<=en;});
+  const inc=sum(per.filter(x=>x.k==="inc"),"inc"),exp=sum(per.filter(x=>x.k==="exp"),"exp");
+  const bal=c.bal!=null?c.bal:sum(mine.filter(x=>x.d>today()),"exp");
+  const tiles=h("div",null,h("div",{class:"pair"},
+    h("div",{class:"tile"},h("span",{class:"lab",text:"입금"}),h("b",{class:"c-inc",text:won(inc)+"원"})),
+    h("div",{class:"tile"},h("span",{class:"lab",text:"출금"}),h("b",{class:"c-exp",text:won(exp)+"원"}))),
+    h("div",{class:"pair"},h("div",{class:"tile"},h("span",{class:"lab",text:"합계 (출금−입금)"}),h("b",{text:won(exp-inc)+"원"})),
+    h("div",{class:"tile"},h("span",{class:"lab",text:"누적잔액"}),h("b",{text:won(bal)+"원"}))));
+  const P=[h("section",{class:"card"},h("div",{class:"card-head"},h("h2",{text:"이용기간 정리"}),h("span",{class:"lab",text:per.length+"건"})),tiles)];
+  if(c.goal){const used=per.filter(x=>!x.nx).reduce((s,x)=>s+useAmt(x),0),left=Math.max(0,c.goal-used);
+    P.push(h("section",{class:"card"},h("h2",{text:"실적"}),
+      h("div",{class:"pair"},h("div",{class:"tile"},h("span",{class:"lab",text:"실적 목표"}),h("b",{text:won(c.goal)+"원"})),
+        h("div",{class:"tile"},h("span",{class:"lab",text:"실적 사용금액"}),h("b",{text:won(used)+"원"}))),
+      h("div",{class:"tile"},h("span",{class:"lab",text:"남은 금액"}),h("b",{class:left?"c-exp":"c-inc",text:won(left)+"원"})),
+      h("p",{class:"hint",text:"실적에서 뺀 사용분(세금·상품권 등)은 빠져 있어요."})));}
+  return P;}
   function viewCardDetail(c){const t=today(),np=nextPay(c),mine=allTx().filter(x=>x.card===c.id),P=[];
     P.push(h("button",{class:"ghost",type:"button",style:"align-self:flex-start;padding-left:0",onclick:()=>{sub="";imp=null;render();}},"‹ 카드"));
     const file=h("input",{type:"file",accept:".xlsx,.xls,.csv,.txt",id:"stmt",hidden:true});
@@ -909,11 +1413,12 @@ body.locked>*:not(#lock){visibility:hidden}
       catch(e){if(st)st.textContent=e.message==="lib"?"엑셀 읽기 도구를 불러오지 못했어요. 인터넷 연결을 확인하고 다시 해 주세요.":"가맹점과 금액 칸을 찾지 못했어요. 카드사에서 '이용내역 엑셀'로 받은 파일인지 확인해 주세요.";}
       file.value="";});
     P.push(h("section",{class:"card hero"},h("div",{class:"card-head"},h("h2",{style:"font-size:1.2rem",text:c.n||"이름 없는 카드"}),h("button",{class:"ghost",type:"button",onclick:()=>openCard(c)},"고치기")),
-      h("p",{class:"lab",text:cycText(c)}),
+      h("p",{class:"lab",text:cycText(c)}),perLine(c),
       h("div",{class:"pair"},h("div",{class:"tile"},h("span",{class:"lab",text:"다음 출금 "+dLabel(np)}),h("b",{class:"c-exp",text:won(sum(mine.filter(x=>x.d>=t&&x.d<=np),"exp"))+"원"})),
         h("div",{class:"tile"},h("span",{class:"lab",text:"그 뒤 출금 예정"}),h("b",{text:won(sum(mine.filter(x=>x.d>np),"exp"))+"원"}))),
-      h("div",{class:"acts"},h("button",{class:"btn",type:"button",onclick:()=>openTx(null,{card:c.id,d:today()})},"＋ 사용 내역"),h("button",{class:"btn line",type:"button",onclick:()=>file.click()},"명세서 불러오기"),file),
+      h("div",{class:"acts"},h("button",{class:"btn",type:"button",onclick:()=>openTx(null,{card:c.id,d:today()})},"＋ 사용 내역"),h("button",{class:"btn line",type:"button",onclick:()=>file.click()},"결제 · 명세서"),file),
       h("p",{class:"hint",id:"impmsg",text:"명세서는 카드사 앱·홈페이지에서 받은 이용내역 엑셀(.xlsx, .xls)이나 CSV 파일을 읽어요. 이미 적어 둔 내역과 겹치면 건너뛰고 빠진 것만 넣어요."})));
+    P.push(...cardPeriodCard(c));
     if(imp&&imp.card===c.id)P.push(impPanel(c));
     P.push(perfSection(c));
     const bi=moneyInput("cb-"+c.id,balDraft[c.id]!=null?balDraft[c.id]:(c.bal||0),v=>{balDraft[c.id]=v;});
@@ -931,6 +1436,8 @@ body.locked>*:not(#lock){visibility:hidden}
       barChart(pl.months.map(([m,a])=>({lab:(+m.slice(5))+"월",val:a,on:true})),"다가오는 할부 결제 예정"),
       h("div",null,pl.months.map(([m,a])=>kv(dLabel(payOn(c,m))+" 출금 예정",won(a)+"원","c-exp"))),
       h("p",{class:"hint",text:"이미 긁은 할부만 계산한 금액이에요. 앞으로 새로 쓰는 금액은 빠져 있고, 다음 달 명세서를 올리면 다시 계산해요. 아직 지출에는 들어가지 않아요."})));
+    let run=0;const cum=new Map();
+    mine.slice().sort((a,b)=>{const x=useD(a)+(a.tm||""),y=useD(b)+(b.tm||"");return x<y?-1:x>y?1:0;}).forEach(x=>{run+=x.a;cum.set(x.id,run);});
     const ds=[...new Set(mine.map(x=>x.d))].sort(),days=[...ds.filter(x=>x>=t),...ds.filter(x=>x<t).reverse()];
     if(!days.length)P.push(h("section",{class:"card"},h("p",{class:"empty",text:"아직 이 카드로 적은 내역이 없어요."})));
     days.forEach((d,i)=>{const g=mine.filter(x=>x.d===d),tot=sum(g,"exp"),by=new Map();g.forEach(x=>by.set(x.cat,(by.get(x.cat)||0)+x.a));
@@ -938,7 +1445,7 @@ body.locked>*:not(#lock){visibility:hidden}
         h("summary",null,h("div",{class:"hb-top"},h("span",null,h("b",{text:fullD(d)}),d>t?" 출금 예정":" 출금"),h("b",{class:"c-exp",text:"−"+won(tot)+"원"})),h("span",{class:"lab",text:g.length+"건 · "+(()=>{const bl=bankLine(c,d,3,new Set([tot]));if(!bl)return "통장 출금 줄과 아직 비교 안 됨";const oa=bl.oa||bl.a;return "통장 인출 "+won(oa)+"원"+(oa===tot?"과 일치":" · 차이 "+won(Math.abs(oa-tot))+"원");})()+" · 눌러서 펼치기/접기"})),
         h("div",{style:"padding-top:8px"},[...by.entries()].sort((a,b)=>b[1]-a[1]).map(([id,a])=>hbar(catName(id),a,tot,(catById(id)||{}).s||"")),h("button",{class:"btn line",type:"button",style:"margin:10px 0;width:100%",onclick:()=>{catEdit=catEdit===c.id+"|"+d?"":c.id+"|"+d;render();}},catEdit===c.id+"|"+d?"항목 정리 끝내기":"항목 정리 (한 화면에서 고르기)"),
           catEdit===c.id+"|"+d?h("p",{class:"hint",text:"한 줄에서 고르면 같은 가맹점의 미분류 줄도 함께 바뀌고, 바로 저장돼요. 다음 달부터는 자동으로 채워져요."}):null,
-          g.sort((a,b)=>(a.ud||"")<(b.ud||"")?1:-1).map((x,j)=>catEdit===c.id+"|"+d?catRow(x,g,j):txRow(x))))));});
+          g.sort((a,b)=>(a.ud||"")<(b.ud||"")?1:-1).map((x,j)=>h("div",{class:"crow"},h("div",{style:"flex:1;min-width:0"},catEdit===c.id+"|"+d?catRow(x,g,j):txRow(x)),h("span",{class:"cum",text:short(cum.get(x.id)||0)+"원"})))))));});
     if(plSec)P.push(plSec);
     return P;}
 
@@ -1152,33 +1659,79 @@ body.locked>*:not(#lock){visibility:hidden}
 
   // ---------- assets ----------
   let capMcp=null,capDl=null,bkMsg="",adj={},bkPend=null;
+  const AGRP=[["etc","미분류"],["cash","현금"],["bank","은행"],["card","카드"],["pay","선불식카드"],["pen","저축"],["sec","투자"],["re","부동산"],["ins","보험"],["loan","대출"]];
+  let assetMode="",assetAdd=false;
+  const ordOf=(x,i)=>x&&isFinite(x.ord)?x.ord:i;
+  function assetMove(items,idx,dir){const j=idx+dir;if(j<0||j>=items.length)return;
+    items.forEach((it,k)=>{if(!isFinite(it.x.ord))it.x.ord=k;});
+    const a=items[idx].x,b=items[j].x,oa=a.ord;a.ord=b.ord;b.ord=oa;touch("meta");render();}
+  function assetRow(a,v,items,idx){
+    const inv=a.ty==="sec"||a.ty==="pen",lc=a.ty==="loan"?loanCalc(a):null,ic=a.ty==="ins"?insCalc(a):null;
+    const small=a.ty==="ins"?"낸 돈 "+short(ic.paid)+"원"+(ic.fut!=null?" · 앞으로 "+short(ic.fut)+"원":"")
+      :lc?"금리 "+lc.R+"% · 이번 달 이자 "+won(lc.mi)+"원"
+      :inv?"넣은 돈 "+short(princ(a)):"";
+    return h("div",{class:"arow"},
+      h("button",{class:"arowb",type:"button",onclick:()=>{sub="a:"+a.id;window.scrollTo(0,0);render();}},
+        h("span",{class:"l"},h("span",{text:a.n||"이름 없는 계좌"}),small?h("small",{text:small}):null),
+        h("span",{class:"r"+(v<0||a.ty==="loan"?" c-exp":""),text:won(Math.abs(v))+"원"})),
+      assetMode==="hide"?h("button",{class:"mini",type:"button",onclick:()=>{a.hide=true;touch("meta");render();toast("숨겼어요. 아래 '숨긴 자산'에서 되돌릴 수 있어요.");}},"숨기기"):null,
+      assetMode==="del"?delBtn("삭제",()=>{meta.accts=meta.accts.filter(x=>x!==a);touch("meta");render();toast("지웠어요. 적어 둔 내역은 남아 있어요.");}):null,
+      assetMode==="order"?h("span",{class:"ord"},h("button",{type:"button","aria-label":(a.n||"자산")+" 위로",onclick:()=>assetMove(items,idx,-1)},"▲"),
+        h("button",{type:"button","aria-label":(a.n||"자산")+" 아래로",onclick:()=>assetMove(items,idx,1)},"▼")):null);
+  }
+  function cardAssetRow(c,items,idx){
+    const due=cardDue(c);
+    return h("div",{class:"arow"},
+      h("button",{class:"arowb",type:"button",onclick:()=>{tab="card";sub="c:"+c.id;ls.set("ledger_tab",tab);window.scrollTo(0,0);render();}},
+        h("span",{class:"l"},h("span",{text:c.n||"이름 없는 카드"}),h("small",{text:"다음 출금 "+dLabel(nextPay(c))}))),
+      h("span",{class:"acols"},
+        h("span",null,h("b",{class:"c-exp",text:won(due)}),h("small",{text:"결제예정"})),
+        h("span",null,h("b",{text:c.bal!=null?won(c.bal):"—"}),h("small",{text:"미결제"}))),
+      assetMode==="hide"?h("button",{class:"mini",type:"button",onclick:()=>{c.hide=true;touch("meta");render();toast("카드를 숨겼어요");}},"숨기기"):null,
+      assetMode==="order"?h("span",{class:"ord"},h("button",{type:"button","aria-label":(c.n||"카드")+" 위로",onclick:()=>assetMove(items,idx,-1)},"▲"),
+        h("button",{type:"button","aria-label":(c.n||"카드")+" 아래로",onclick:()=>assetMove(items,idx,1)},"▼")):null);
+  }
   function viewAsset(){if(sub.startsWith("a:")){const a=acctBy(sub.slice(2));if(a)return viewAcct(a);sub="";}
     const np=netParts(),P=[];
-    P.push(h("section",{class:"card hero"},h("p",{class:"lab",text:"순자산 (자산 − 갚을 돈)"}),h("p",{class:"big"+(np.net<0?" c-exp":"")},won(np.net),h("small",{text:"원"})),
-      h("div",{class:"pair"},h("div",{class:"tile"},h("span",{class:"lab",text:"자산"}),h("b",{text:won(np.pos)+"원"})),h("div",{class:"tile"},h("span",{class:"lab",text:"갚을 돈 (대출·카드)"}),h("b",{class:"c-exp",text:won(np.neg)+"원"}))),
-      h("div",{class:"acts"},h("button",{class:"btn",type:"button",onclick:()=>openAcct(null)},"＋ 자산 추가"),movable().length>1?h("button",{class:"btn line",type:"button",onclick:()=>openTx(null,{k:"tr",d:today()})},"이체"):null)));
-    if(!meta.accts.length){P.push(h("section",{class:"card"},h("p",{class:"empty",text:"통장, 현금, 선불 페이, 증권, 연금, 부동산, 대출을 하나씩 등록해 주세요. 통장은 지금 잔액만 넣어 두면, 그 뒤로 적는 수입·지출·이체·카드값 출금에 따라 잔액이 자동으로 바뀌어요."})));return P;}
+    P.push(h("section",{class:"card hero"},
+      h("p",{class:"lab",text:"합계 (자산 − 부채)"}),h("p",{class:"big"+(np.net<0?" c-exp":"")},won(np.net),h("small",{text:"원"})),
+      h("div",{class:"pair"},h("div",{class:"tile"},h("span",{class:"lab",text:"자산"}),h("b",{text:won(np.pos)+"원"})),
+        h("div",{class:"tile"},h("span",{class:"lab",text:"부채 (대출·카드)"}),h("b",{class:"c-exp",text:won(np.neg)+"원"})))));
+    P.push(h("div",{class:"amode"},
+      h("button",{type:"button","aria-pressed":String(assetAdd),onclick:()=>{assetAdd=!assetAdd;render();}},"＋ 추가"),
+      h("button",{type:"button","aria-pressed":String(assetMode==="hide"),onclick:()=>{assetMode=assetMode==="hide"?"":"hide";render();}},"표시·숨김"),
+      h("button",{type:"button","aria-pressed":String(assetMode==="del"),onclick:()=>{assetMode=assetMode==="del"?"":"del";render();}},"삭제"),
+      h("button",{type:"button","aria-pressed":String(assetMode==="order"),onclick:()=>{assetMode=assetMode==="order"?"":"order";render();}},"순서 변경")));
+    if(assetAdd)P.push(h("section",{class:"card"},h("h2",{text:"무엇을 추가할까요"}),
+      h("div",{class:"acts"},h("button",{class:"btn",type:"button",onclick:()=>{assetAdd=false;openAcct(null);}},"계좌·현금·투자"),
+        h("button",{class:"btn line",type:"button",onclick:()=>{assetAdd=false;openCard(null);}},"카드"))));
+    const groups=AGRP.map(([k,n])=>{
+      const raw=k==="card"?meta.cards.map((c,i)=>({t:"c",x:c,i:i})):meta.accts.filter(a=>a.ty===k).map((a,i)=>({t:"a",x:a,i:i}));
+      raw.sort((p,q)=>ordOf(p.x,p.i)-ordOf(q.x,q.i));
+      raw.forEach((it,idx)=>{it.idx=idx;it.v=it.t==="c"?cardDue(it.x):aval(it.x);});
+      return {k:k,n:n,items:raw};}).filter(g=>g.items.length);
+    if(!groups.length)P.push(h("section",{class:"card"},h("p",{class:"empty",text:"통장, 현금, 선불 페이, 증권, 연금, 부동산, 대출을 하나씩 등록해 주세요. 통장은 지금 잔액만 넣어 두면 그 뒤로 적는 내역에 따라 잔액이 자동으로 바뀌어요."})));
+    groups.forEach(g=>{
+      const vis=assetMode==="hide"?g.items:g.items.filter(it=>!it.x.hide);
+      if(!vis.length&&assetMode!=="hide")return;
+      const tot=g.items.reduce((s,it)=>s+it.v,0);
+      const box=h("section",{class:"card agroup",style:"gap:0"},
+        h("div",{class:"card-head",style:"padding-bottom:6px"},h("h2",{text:g.n}),h("b",{class:tot<0?"c-exp":"",text:won(Math.abs(tot))+"원"})));
+      vis.forEach(it=>box.append(it.t==="c"?cardAssetRow(it.x,g.items,it.idx):assetRow(it.x,it.v,g.items,it.idx)));
+      P.push(box);
+      if(g.k==="ins"){const cc=covCard();if(cc)P.push(cc);}
+      if(g.k==="loan"){const mi=g.items.reduce((x,it)=>x+((loanCalc(it.x)||{}).mi||0),0);
+        if(mi)P.push(h("p",{class:"lab",style:"text-align:right",text:"대출 이번 달 이자 합계 "+won(mi)+"원 · 1년 "+won(mi*12)+"원"}));}
+    });
+    const hid=meta.accts.filter(a=>a.hide),hidCards=meta.cards.filter(c=>c.hide);
+    if((hid.length||hidCards.length)&&assetMode!=="hide")P.push(h("section",{class:"card",style:"gap:0"},
+      h("details",{class:"person",style:"border:0;padding:0"},h("summary",null,h("div",{class:"hb-top"},h("span",null,h("b",{text:"숨긴 자산 "+(hid.length+hidCards.length)+"개"})),h("span",{class:"lab",text:"눌러서 펼치기"}))),
+        h("div",{style:"padding-top:8px"},hid.map(a=>h("div",{class:"impr",style:"margin-bottom:6px"},h("div",{class:"impm"},h("span",{text:(a.n||"이름 없는 계좌")+" · "+tyName(a.ty)}),h("b",{text:won(Math.abs(aval(a)))+"원"})),
+            h("div",{class:"acts"},h("button",{class:"btn line",type:"button",style:"min-height:42px",onclick:()=>{a.hide=false;touch("meta");render();}},"다시 보이기"),acctDel(a,"min-height:42px")))),
+          hidCards.map(c=>h("div",{class:"impr",style:"margin-bottom:6px"},h("div",{class:"impm"},h("span",{text:(c.n||"이름 없는 카드")+" · 카드"}),h("b",{text:won(cardDue(c))+"원"})),
+            h("div",{class:"acts"},h("button",{class:"btn line",type:"button",style:"min-height:42px",onclick:()=>{c.hide=false;touch("meta");render();}},"다시 보이기"))))))));
     const sm=Object.keys(meta.snap).sort().slice(-6);
     if(sm.length)P.push(h("section",{class:"card"},h("h2",{text:"월별 순자산"}),barChart(sm.map(m=>({lab:(+m.slice(5))+"월",val:m===YM()?np.net:meta.snap[m],on:m===YM()})),"월별 순자산"),sm.length<2?h("p",{class:"hint",text:"달이 바뀔 때마다 막대가 하나씩 쌓여요."}):null));
-    const byTy=ATY.map(([ty,n])=>({ty,n,list:np.as.filter(x=>x.a.ty===ty)})).filter(g=>g.list.length);
-    const posG=byTy.filter(g=>g.ty!=="loan").map(g=>({n:g.n,v:g.list.reduce((x,y)=>x+Math.max(y.v,0),0)})).filter(g=>g.v>0);
-    if(posG.length>1)P.push(h("section",{class:"card"},h("h2",{text:"자산 구성"}),h("div",null,posG.sort((a,b)=>b.v-a.v).map(g=>hbar(g.n,g.v,np.pos,"ph")))));
-    byTy.forEach(g=>{const tot=g.list.reduce((x,y)=>x+y.v,0),isIns=g.ty==="ins",prem=g.list.reduce((x,y)=>x+(insCalc(y.a).on?y.a.m:0),0);
-      P.push(h("section",{class:"card",style:"gap:0"},h("div",{class:"card-head",style:"padding-bottom:6px"},h("h2",{text:g.n}),h("b",{class:tot<0?"c-exp":"",text:isIns?"매달 "+won(prem)+"원":won(Math.abs(tot))+"원"})),
-        g.list.map(({a,v})=>{const inv=a.ty==="sec"||a.ty==="pen",pr=princ(a),lc=a.ty==="loan"?loanCalc(a):null,ic=isIns?insCalc(a):null;
-          const small=isIns?"낸 돈 "+short(ic.paid)+"원"+(ic.fut!=null?" · 앞으로 "+short(ic.fut)+"원":"")+(v?" · 적립금 "+short(v)+"원":"")
-            :lc?"금리 "+lc.R+"% · 이번 달 이자 "+won(lc.mi)+"원":inv&&pr>0?"넣은 돈 "+short(pr)+" · 수익률 "+((v/pr-1)*100).toFixed(1)+"%"+(a.usd?" · 달러":""):a.usd&&!meta.fx?"환율을 넣어 주세요":!a.obAt&&!inv?"잔액을 아직 안 맞췄어요 · 내역 "+allTx().filter(t=>acctOf(t)===a.id||t.from===a.id||t.to===a.id).length+"건":"";
-          return h("button",{class:"rowbtn",type:"button",onclick:()=>{sub="a:"+a.id;window.scrollTo(0,0);render();}},h("span",{class:"l"},h("span",{text:a.n||"이름 없는 계좌"}),h("small",{text:small})),
-            h("span",{class:"r"+(v<0?" c-exp":""),text:(isIns?"월 "+won(a.m):won(Math.abs(v)))+"원 ›"}));})));
-      if(isIns){const cc=covCard();if(cc)P.push(cc);}
-      if(g.ty==="loan"){const mi=g.list.reduce((x,y)=>x+((loanCalc(y.a)||{}).mi||0),0);if(mi)P.push(h("p",{class:"lab",style:"text-align:right",text:"대출 이번 달 이자 합계 "+won(mi)+"원 · 1년 "+won(mi*12)+"원"}));}});
-    const hid=meta.accts.filter(a=>a.hide);
-    if(hid.length)P.push(h("section",{class:"card",style:"gap:0"},h("details",{class:"person",style:"border:0;padding:0"},h("summary",null,h("div",{class:"hb-top"},h("span",null,h("b",{text:"숨긴 자산 "+hid.length+"개"})),h("span",{class:"lab",text:"눌러서 펼치기"})),h("span",{class:"lab",text:"숨긴 자산은 순자산과 목록에서 빠져요."})),
-      h("div",{style:"padding-top:8px"},hid.map(a=>h("div",{class:"impr",style:"margin-bottom:6px"},h("div",{class:"impm"},h("span",{text:(a.n||"이름 없는 계좌")+" · "+tyName(a.ty)+" · 내역 "+allTx().filter(t=>acctOf(t)===a.id||t.from===a.id||t.to===a.id).length+"건"}),h("b",{text:won(Math.abs(aval(a)))+"원"})),
-        h("div",{class:"acts"},h("button",{class:"btn line",type:"button",style:"min-height:42px",onclick:()=>{a.hide=false;touch("meta");render();}},"다시 보이기"),acctDel(a,"min-height:42px"))))))));
-    const due=np.due.filter(x=>x.v>0);
-    if(due.length)P.push(h("section",{class:"card",style:"gap:0"},h("div",{class:"card-head",style:"padding-bottom:6px"},h("h2",{text:"카드 (갚을 돈)"}),h("b",{class:"c-exp",text:won(due.reduce((x,y)=>x+y.v,0))+"원"})),
-      due.map(({c,v})=>h("button",{class:"rowbtn",type:"button",onclick:()=>{tab="card";sub="c:"+c.id;ls.set("ledger_tab",tab);window.scrollTo(0,0);render();}},h("span",{class:"l"},h("span",{text:c.n}),h("small",{text:"다음 출금 "+dLabel(nextPay(c))+(c.acct&&acctBy(c.acct)?" · "+acctName(c.acct)+"에서":" · 결제 통장을 정해 주세요")})),h("span",{class:"r c-exp",text:won(v)+"원 ›"})))));
     return P;}
   function acctDel(a,st){const b=delBtn("지우기",()=>{meta.accts=meta.accts.filter(x=>x!==a);touch("meta");sub="";render();toast("지웠어요. 적어 둔 내역은 남아 있어요.");});if(st)b.setAttribute("style",st);return b;}
   const acctTools=a=>h("div",{class:"acts"},h("button",{class:"btn line",type:"button",style:"min-height:42px",onclick:()=>{a.hide=true;touch("meta");sub="";render();toast("숨겼어요. 자산 화면 맨 아래 '숨긴 자산'에서 되돌릴 수 있어요.");}},"숨기기"),acctDel(a,"min-height:42px"));
@@ -1218,7 +1771,7 @@ body.locked>*:not(#lock){visibility:hidden}
       a.hold.length?h("div",{class:"f"},h("label",{for:"hcash-"+a.id,text:"예수금 (계좌에 남은 현금"+(a.usd?", 달러)":")")}),cash):null,
       h("p",{class:"hint",text:"시세는 자동으로 바뀌지 않아요. 증권사에서 받은 잔고 파일을 내역 메뉴의 '파일로 불러오기'에 올리면 종목과 지금 가격이 한꺼번에 바뀌어요."}));
     return card;}
-  function openAcct(a){if(!ready)return;draft=a?{type:"acct",orig:a,n:a.n,ty:a.ty,amt:0,usd:a.usd}:{type:"acct",orig:null,n:"",ty:"bank",amt:0,ev:0,usd:false};showSheet();}
+  function openAcct(a){if(!ready)return;draft=a?{type:"acct",orig:a,n:a.n,ty:a.ty,amt:0,usd:a.usd,smsPhone:a.smsPhone||"",appMatch:a.appMatch||"",smsKeywords:(a.smsKeywords||[]).join(", ")}:{type:"acct",orig:null,n:"",ty:"bank",amt:0,ev:0,usd:false,smsPhone:"",appMatch:"",smsKeywords:""};showSheet();}
   function sheetAcct(){const d=draft,inv=d.ty==="sec"||d.ty==="pen";
     const P=[h("div",{class:"card-head"},h("h2",{text:d.orig?"자산 고치기":"자산 추가"}),h("button",{class:"ghost",type:"button",onclick:closeSheet},"닫기")),
       h("div",{class:"f"},h("span",{class:"flab",text:"종류"}),h("div",{class:"chips",role:"group","aria-label":"자산 종류"},ATY.map(([v,l])=>h("button",{class:"chip",type:"button","aria-pressed":String(d.ty===v),onclick:()=>{d.ty=v;renderSheet();}},l)))),
@@ -1229,11 +1782,16 @@ body.locked>*:not(#lock){visibility:hidden}
     else P.push(h("p",{class:"hint",text:"금액은 자산 화면에서 '맞추기'로 고쳐요."}));
     if(inv){const u=h("input",{type:"checkbox",id:"s-usd",checked:!!d.usd});u.addEventListener("change",()=>{d.usd=u.checked;renderSheet();});
       P.push(h("label",{class:"switch",for:"s-usd"},u,"달러 계좌 (미국 주식 등)"),d.usd?h("p",{class:"hint",text:"종목 가격·예수금·평가액은 달러로 적고, 환율을 곱해 원화로 합쳐요. 넣은 돈(원금)은 환전한 원화 금액으로 적어 주세요."}):null);}
+    if(["bank","cash","pay"].includes(d.ty))P.push(h("div",{class:"f"},h("span",{class:"flab",text:"자산정보 (문자와 연결)"}),
+      h("p",{class:"hint",text:"문자·알림이 오면 여기 적은 전화번호·어플·문자연결 말로 이 계좌를 먼저 찾아요."})),
+      textField("s-aphone","전화번호 (문자 발신번호)",d.smsPhone,v=>{d.smsPhone=S(v).replace(/[^\d]/g,"").slice(0,20);},"15990000",20),
+      textField("s-aapp","어플 이름",d.appMatch,v=>{d.appMatch=v;},"신한 SOL, 카카오뱅크",24),
+      kwField("s-akw","문자연결 키워드 (쉼표·줄바꿈으로 여러 개)",d.smsKeywords,v=>{d.smsKeywords=v;},"신한은행 입금, 신한카드"));
     if(d.err)P.push(h("p",{class:"err",role:"alert",text:d.err}));
     P.push(h("div",{class:"acts"},d.orig?delBtn("지우기",()=>{meta.accts=meta.accts.filter(x=>x!==d.orig);touch("meta");sub="";closeSheet();toast("지웠어요. 적어 둔 내역은 남아 있어요.");}):null,
       h("button",{class:"btn",type:"button",onclick:()=>{d.err=!d.n.trim()?"이름을 넣어 주세요.":"";if(d.err){renderSheet();return;}
-        if(d.orig){d.orig.n=d.n.trim();d.orig.ty=d.ty;d.orig.usd=inv&&!!d.usd;}
-        else meta.accts.push(cleanAcct({id:rid(),n:d.n.trim(),ty:d.ty,ob:d.ty==="ins"?0:d.amt,paid:d.ty==="ins"?d.amt:0,obAt:today(),ev:inv&&d.ev?d.ev:null,evAt:inv&&d.ev?today():"",usd:inv&&!!d.usd}));
+        if(d.orig){d.orig.n=d.n.trim();d.orig.ty=d.ty;d.orig.usd=inv&&!!d.usd;d.orig.smsPhone=S(d.smsPhone).replace(/[^\d]/g,"").slice(0,20);d.orig.appMatch=S(d.appMatch).trim().slice(0,24);d.orig.smsKeywords=cleanKw(d.smsKeywords);}
+        else meta.accts.push(cleanAcct({id:rid(),n:d.n.trim(),ty:d.ty,ob:d.ty==="ins"?0:d.amt,paid:d.ty==="ins"?d.amt:0,obAt:today(),ev:inv&&d.ev?d.ev:null,evAt:inv&&d.ev?today():"",usd:inv&&!!d.usd,smsPhone:S(d.smsPhone).replace(/[^\d]/g,"").slice(0,20),appMatch:S(d.appMatch).trim().slice(0,24),smsKeywords:cleanKw(d.smsKeywords)}));
         touch("meta");closeSheet();toast("저장했어요");}},"저장")));
     return P;}
 
@@ -1302,7 +1860,8 @@ body.locked>*:not(#lock){visibility:hidden}
       const o=pending;bkPend=null;
       rbtn.disabled=true;rbtn.className="btn line";rbtn.textContent="되돌리는 중…";
       say("되돌리는 중… 저장이 끝날 때까지 잠시만 기다려 주세요.");
-      try{const c=await restore(o);bkMsg="백업한 때의 기록으로 되돌렸고, "+won(c.tx)+"건을 모두 저장했어요.";}
+      try{const c=await restore(o);bkMsg="백업한 때의 기록으로 되돌렸고, "+won(c.tx)+"건을 모두 저장했어요.";
+        if(WEBAPP_URL&&syncOn)setTimeout(()=>syncPush(true),200);}
       catch(e){bkMsg="되돌렸지만 저장을 마치지 못했어요. "+saveErrMsg;}
       rbtn.disabled=false;rbtn.textContent="백업 파일로 되돌리기";rbtn.className="btn line";render();});
     file.addEventListener("change",async()=>{const f=file.files[0];if(!f)return;try{const o=JSON.parse(await f.text());if(o.app!=="hangot-ledger"||!o.meta||!Array.isArray(o.meta.cats))throw 0;
@@ -1324,6 +1883,9 @@ body.locked>*:not(#lock){visibility:hidden}
   function moneyInput(id,val,on){const i=h("input",{id,inputmode:"numeric",autocomplete:"off",placeholder:"0",value:val?Number(val).toLocaleString("en-US"):""});
     i.addEventListener("input",()=>{const raw=i.value.replace(/[^\d]/g,"").replace(/^0+(?=\d)/,"").slice(0,13);i.value=raw?Number(raw).toLocaleString("en-US"):"";on(raw?Number(raw):0);});
     return h("div",{class:"inbox"},i,h("span",{class:"u",text:"원"}));}
+  function kwField(id,label,val,on,ph){const t=h("textarea",{class:"txt",id,placeholder:ph||"",maxlength:"600",style:"min-height:78px"});
+    t.value=Array.isArray(val)?val.join(", "):S(val);t.addEventListener("input",()=>on(t.value));
+    return h("div",{class:"f"},h("label",{for:id,text:label}),t);}
   function textField(id,label,val,on,ph,max){const i=h("input",{class:"txt",id,value:val||"",placeholder:ph||"",maxlength:max||40,autocomplete:"off"});i.addEventListener("input",()=>on(i.value));
     return h("div",{class:"f"},h("label",{for:id,text:label}),i);}
   let ncf=null;
@@ -1448,7 +2010,8 @@ body.locked>*:not(#lock){visibility:hidden}
     d.saved=true;if(assetsCap)(d.delAtt||[]).forEach(id=>assetsCap.delete(id).catch(()=>{}));
     closeSheet();toast(sameN?"고쳤어요 · 같은 내용 "+sameN+"건도 함께 바꿨어요":n>1?n+"개월 할부로 나눠 기록했어요":t.card?md(t.d)+" 출금으로 기록했어요":d.orig?"고쳤어요":"기록했어요");}
 
-  function openCard(c){if(!ready)return;draft=c?{type:"card",orig:c,n:c.n,day:c.day,off:c.off,sd:c.sd,goal:c.goal||0,acct:c.acct||"",bk:c.bk||"",auto:false}:{type:"card",orig:null,n:"",day:14,goal:0,acct:"",bk:"",auto:true,...defCyc(14)};showSheet();}
+  function openCard(c){if(!ready)return;draft=c?{type:"card",orig:c,n:c.n,day:c.day,off:c.off,sd:c.sd,goal:c.goal||0,acct:c.acct||"",bk:c.bk||"",auto:false,
+      smsPhone:c.smsPhone||"",appMatch:c.appMatch||"",smsKeywords:(c.smsKeywords||[]).join(", ")}:{type:"card",orig:null,n:"",day:14,goal:0,acct:"",bk:"",auto:true,...defCyc(14),smsPhone:"",appMatch:"",smsKeywords:""};showSheet();}
   function sheetCard(){const d=draft,num=(id,key,auto)=>{const i=h("input",{class:"txt",id,inputmode:"numeric",maxlength:"2",value:d[key]||""});
       i.addEventListener("input",()=>{const v=Math.round(Number(i.value.replace(/\D/g,"")));d[key]=v>=1&&v<=31?v:0;if(key==="sd")d.auto=false;});
       i.addEventListener("change",()=>{if(auto&&d.auto&&d.day)Object.assign(d,defCyc(d.day));renderSheet();});return i;};
@@ -1466,11 +2029,17 @@ body.locked>*:not(#lock){visibility:hidden}
         sel.value=acctBy(d.acct)?d.acct:"";sel.addEventListener("change",()=>{d.acct=sel.value;});return h("div",{class:"f"},h("label",{for:"s-cacct",text:"결제 통장 (카드값이 빠져나가는 계좌)"}),sel);})():null,
       h("div",{class:"f"},h("label",{for:"s-goal",text:"월 사용실적 기준 (선택)"}),moneyInput("s-goal",d.goal,v=>{d.goal=v;}),
         h("p",{class:"hint",text:"'전월 실적 30만 원 이상'처럼 혜택 조건이 있으면 그 금액을 넣어 주세요."})),
+      h("div",{class:"f"},h("span",{class:"flab",text:"자산정보 (문자와 연결)"}),
+        h("p",{class:"hint",text:"문자·알림이 오면 여기 적은 전화번호·어플·문자연결 말로 이 카드를 먼저 찾아요."})),
+      textField("s-cphone","전화번호 (문자 발신번호)",d.smsPhone,v=>{d.smsPhone=S(v).replace(/[^\d]/g,"").slice(0,20);},"15884000",20),
+      textField("s-capp","어플 이름",d.appMatch,v=>{d.appMatch=v;},"현대카드, BC페이북",24),
+      kwField("s-ckw","문자연결 키워드 (쉼표·줄바꿈으로 여러 개)",d.smsKeywords,v=>{d.smsKeywords=v;},"BC바로(9493)승인, 비씨바로"),
       h("p",{class:"hint",text:"결제일이 토·일요일이나 공휴일이면 다음 영업일로 잡아요."+(d.orig?" 결제일을 바꿔도 이미 적은 내역의 날짜는 그대로예요.":"")})];
     if(d.err)P.push(h("p",{class:"err",role:"alert",text:d.err}));
     P.push(h("div",{class:"acts"},d.orig?delBtn("지우기",()=>{meta.cards=meta.cards.filter(x=>x!==d.orig);touch("meta");sub="";closeSheet();toast("카드를 지웠어요. 적어 둔 내역은 남아 있어요.");}):null,
       h("button",{class:"btn",type:"button",onclick:()=>{d.err=!d.n.trim()?"별칭을 넣어 주세요.":!ok?"결제일과 시작일은 1~31 사이로 넣어 주세요.":"";if(d.err){renderSheet();return;}
-        const c=d.orig||{id:rid(),bal:null,balAt:""};Object.assign(c,{n:d.n.trim(),day:d.day,off:d.off,sd:d.sd,goal:d.goal||0,acct:d.acct||"",bk:(d.bk||"").trim()});if(!d.orig)meta.cards.push(c);touch("meta");closeSheet();toast("저장했어요");}},"저장")));
+        const c=d.orig||{id:rid(),bal:null,balAt:""};Object.assign(c,{n:d.n.trim(),day:d.day,off:d.off,sd:d.sd,goal:d.goal||0,acct:d.acct||"",bk:(d.bk||"").trim(),
+          smsPhone:S(d.smsPhone).replace(/[^\d]/g,"").slice(0,20),appMatch:S(d.appMatch).trim().slice(0,24),smsKeywords:cleanKw(d.smsKeywords)});if(!d.orig)meta.cards.push(c);touch("meta");closeSheet();toast("저장했어요");}},"저장")));
     return P;}
 
   function openFixed(f){if(!ready)return;
@@ -1526,7 +2095,10 @@ body.locked>*:not(#lock){visibility:hidden}
     if((m=t.match(/(\d{1,2}) ?개월/))){inst=Math.min(36,Math.max(1,+m[1]));t=t.replace(m[0]," ");}
     const am=findAmount(t);if(!am||!am.a)return null;if(am.raw)t=t.replace(am.raw," ");
     const k=/입금|받았|받음|들어왔|수입|환급/.test(t)?"inc":"exp";
-    let card=k==="exp"?aliasHit(t,meta.cards):null;const acct=card?null:aliasHit(t,meta.accts);
+    let card=k==="exp"?aliasHit(t,meta.cards):null;let acct=card?null:aliasHit(t,meta.accts);
+    {const d4=paren4(src);if(d4.length){
+      if(!card)card=meta.cards.find(c=>d4.some(d=>S(c.n).replace(/\D/g,"").includes(d)))||null;
+      if(!card&&!acct)acct=meta.accts.find(a=>d4.some(d=>S(a.n).replace(/\D/g,"").includes(d)))||null;}}
     if(!card&&!acct&&k==="exp"&&/승인|일시불|할부|카드/.test(t)&&meta.cards.length===1)card=meta.cards[0];
     [card,acct].forEach(x=>{if(x)S(x.n).split(/\s+/).forEach(w=>{if(w.length>=2)t=t.split(w).join(" ");});});
     t=t.replace(/(삼성|현대|롯데|신한|국민|KB|우리|하나|농협|NH|비씨|BC|씨티|카카오|토스)(카드|체크|뱅크|은행)?(?= ?\d| ?\(| ?승인| ?출금| ?입금)/gi," ").replace(/승인|취소|일시불|할부|출금|입금|결제|이체|체크|신용|카드|사용|오늘|어제|그저께|그제|Web발신|원\b/g," ")
@@ -1541,9 +2113,10 @@ body.locked>*:not(#lock){visibility:hidden}
     return blocks.map(parseOne).filter(Boolean);}
   function addEntry(o){const c=catById(o.cat),cd=o.k==="exp"?cardBy(o.pay):null,ac=!cd&&S(o.pay).startsWith("a:")?acctBy(S(o.pay).slice(2)):null,base={k:o.k,cat:c?c.id:"",s:c?c.s:(o.s||"hm"),memo:S(o.memo).trim().slice(0,60)};
     if(o.tm&&/^\d{2}:\d{2}$/.test(o.tm))base.tm=o.tm;
-    if(!cd){const t={id:rid(),d:o.d,a:o.a,...base,tags:[]};if(ac)t.acct=ac.id;mdoc(ymOf(t.d)).tx.push(t);touch("m-"+ymOf(t.d));return;}
+    if(Array.isArray(o.tags)&&o.tags.length)base.tags=cleanTags(o.tags);
+    if(!cd){const t={id:rid(),d:o.d,a:o.a,...base,tags:base.tags||[]};if(ac)t.acct=ac.id;mdoc(ymOf(t.d)).tx.push(t);touch("m-"+ymOf(t.d));return;}
     const n=o.inst>1?o.inst:1,per=Math.floor(o.a/n),M=payMonth(cd,o.d),grp=rid();
-    for(let i=0;i<n;i++){const t={id:rid(),d:payOn(cd,shiftYM(M,i)),a:n>1?(i?per:o.a-per*(n-1)):(o.neg?-o.a:o.a),...base,tags:[],card:cd.id,ud:o.d};
+    for(let i=0;i<n;i++){const t={id:rid(),d:payOn(cd,shiftYM(M,i)),a:n>1?(i?per:o.a-per*(n-1)):(o.neg?-o.a:o.a),...base,tags:base.tags||[],card:cd.id,ud:o.d};
       if(cd.acct&&acctBy(cd.acct))t.acct=cd.acct;if(n>1){t.grp=grp;t.ins={i:i+1,n,tot:o.a};}mdoc(ymOf(t.d)).tx.push(t);touch("m-"+ymOf(t.d));}}
   function openQuick(){if(!ready)return;draft={type:"quick",text:"",items:null};showSheet();}
   function sheetQuick(){const d=draft,P=[h("div",{class:"card-head"},h("h2",{text:"빠른 입력"}),h("button",{class:"ghost",type:"button",onclick:closeSheet},"닫기"))];
@@ -1646,17 +2219,18 @@ body.locked>*:not(#lock){visibility:hidden}
       if(!best||k.length>norm(best.kw).length)best=r;});
     return best;}
   function buildAlert(it){
-    const raw=[S(it.app),S(it.title),S(it.text)].filter(Boolean).join(" ");
+    const raw=[S(it.title),S(it.text)].filter(Boolean).join(" ")||S(it.app);
     let p=null;try{p=parseOne(raw);}catch(e){}
     const gt=gotTime(it.time);
     const o={row:Number(it.row)||0,type:S(it.type),app:S(it.app),title:S(it.title),text:S(it.text),st:"대기",
       d:gt?gt.d:(p?p.d:today()),tm:gt?gt.tm:"",k:p?p.k:"exp",a:(p&&p.a)||0,memo:(p&&p.memo)||"",pay:(p&&p.pay)||"",
       cat:(p&&p.cat)||"",inst:(p&&p.inst)||1,neg:!!(p&&p.neg),dup:!!(p&&p.dup),rule:null,remember:true,kw:"",from:"",to:"",note:"",auto:false};
     if(!o.a)o.note="금액을 찾지 못했어요. 금액을 직접 넣어 주세요.";
+    {const sm=assetBySms(o);if(sm&&!(sm.t==="card"&&o.k!=="exp"))o.pay=sm.t==="card"?sm.x.id:"a:"+sm.x.id;}
     const r=ruleHit(o);
     if(r){o.rule=r;o.k=r.kind;
       if(r.cat&&catById(r.cat))o.cat=r.cat;
-      if(r.card&&cardBy(r.card))o.pay=r.card;else if(r.acct&&acctBy(r.acct))o.pay="a:"+r.acct;
+      if(!o.pay){if(r.card&&cardBy(r.card))o.pay=r.card;else if(r.acct&&acctBy(r.acct))o.pay="a:"+r.acct;}
       if(r.memo&&!o.memo)o.memo=r.memo;
       if(r.kind==="tr"){o.from=r.acct||"";o.to=r.to||"";o.pay="";}}
     o.kw=keywordOf(o);
@@ -1692,14 +2266,14 @@ body.locked>*:not(#lock){visibility:hidden}
     if(!(o.a>0))return false;
     if(o.k==="tr"){
       if(!acctBy(o.from)||!acctBy(o.to)||o.from===o.to){if(!quiet)o.note="보내는 곳과 받는 곳을 골라 주세요.";return false;}
-      const t={id:rid(),d:o.d,k:"tr",a:o.a,cat:"",s:"tr",memo:S(o.memo).slice(0,60),tags:[],from:o.from,to:o.to};
+      const t={id:rid(),d:o.d,k:"tr",a:o.a,cat:"",s:"tr",memo:S(o.memo).slice(0,60),tags:(Array.isArray(o.tags)&&o.tags.length?cleanTags(o.tags):[]),from:o.from,to:o.to};
       if(o.tm&&/^\d{2}:\d{2}$/.test(o.tm))t.tm=o.tm;
       mdoc(ymOf(t.d)).tx.push(t);touch("m-"+ymOf(t.d));
     }else{
       const cd=o.k==="exp"?cardBy(o.pay):null;
       const ac=!cd&&S(o.pay).indexOf("a:")===0?acctBy(S(o.pay).slice(2)):null;
       addEntry({k:o.k,a:o.a,d:o.d,memo:o.memo,pay:cd?cd.id:(ac?"a:"+ac.id:""),cat:catById(o.cat)?o.cat:"",
-        s:(catById(o.cat)||{}).s||"hm",inst:1,neg:!!o.neg&&!!cd,on:true,tm:cd?"":o.tm});
+        s:(catById(o.cat)||{}).s||"hm",inst:1,neg:!!o.neg&&!!cd,on:true,tm:cd?"":o.tm,tags:o.tags});
     }
     o.st="반영";o.note="";
     if(o.row>=2&&markQ.indexOf(o.row)<0)markQ.push(o.row);
@@ -1755,7 +2329,7 @@ body.locked>*:not(#lock){visibility:hidden}
     const msg=h("p",{class:"hint",text:"MacroDroid가 보낸 문자·알림을 모으는 구글 시트 웹앱 주소예요. 붙여넣고 저장하면 이 브라우저에만 보관되고, 공개된 웹페이지에는 들어가지 않아요."});
     const save=()=>{const u=S(inp.value).trim();
       if(!sheetOk(u)){msg.className="err";msg.textContent="주소가 올바르지 않아요. https://script.google.com/macros/s/…/exec 형태로 붙여넣어 주세요.";return;}
-      ls.set(SHEET_KEY,u);WEBAPP_URL=u;sheetEdit=false;alertMsg="";alertErr="";render();toast("구글 시트 주소를 연결했어요");fetchAlerts(true);};
+      ls.set(SHEET_KEY,u);WEBAPP_URL=u;sheetEdit=false;alertMsg="";alertErr="";render();toast("구글 시트 주소를 연결했어요");fetchAlerts(true);setTimeout(syncBoot,400);};
     inp.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();save();}});
     return h("section",{class:"card"},
       h("div",{class:"card-head"},h("h2",{text:"구글 시트 웹앱 주소 연결"}),h("span",{class:"lab",text:WEBAPP_URL?"연결됨":"아직 연결 전"})),
@@ -1777,6 +2351,7 @@ body.locked>*:not(#lock){visibility:hidden}
       alertFiltered&&pend.length?h("p",{class:"hint",text:"금융 알림이 아닌 "+alertFiltered+"건은 수집함에 올리지 않고 걸러 두었어요."}):null,
       h("button",{class:"rowbtn",type:"button",onclick:()=>{sub="rules";render();}},
         h("span",{class:"l"},h("span",{text:"문자·알림 규칙 고치기"}),h("small",{text:"가져올 단어·허용 번호·허용 어플과 기억한 규칙을 고칠 수 있어요"})),h("span",{class:"r c-muted",text:"›"}))));
+    const rvE=reviewEntry(pend);if(rvE)P.push(rvE);
     if(!pend.length){P.push(h("section",{class:"card"},h("p",{class:"empty",text:alertItems?"지금 처리할 문자가 없어요. 새 문자·알림이 오면 여기에 모여요.":"아직 불러오지 않았어요. '새로 불러오기'를 눌러 주세요."})));return P;}
     pend.forEach(o=>P.push(alertCard(o)));
     return P;}
@@ -1844,15 +2419,16 @@ body.locked>*:not(#lock){visibility:hidden}
     P.push(card);return P;}
 
   // ---------- render ----------
-  const ICON={home:"M3 11l9-7 9 7M5 10v10h14V10",list:"M4 6h16M4 12h16M4 18h10",card:"M3 6h18v12H3zM3 10h18",asset:"M4 20V10M10 20V4M16 20v-8M22 20H2",more:"M5 12h.01M12 12h.01M19 12h.01"};
-  const TABS=[["home","홈"],["list","내역"],["card","카드"],["asset","자산"],["more","더보기"]];
+  const ICON={home:"M3 11l9-7 9 7M5 10v10h14V10",list:"M4 6h16M4 12h16M4 18h10",card:"M3 6h18v12H3zM3 10h18",asset:"M4 20V10M10 20V4M16 20v-8M22 20H2",stats:"M12 3a9 9 0 1 0 9 9h-9z",more:"M5 12h.01M12 12h.01M19 12h.01"};
+  const MICO={alerts:"M12 3a5 5 0 0 0-5 5v3l-2 4h14l-2-4V8a5 5 0 0 0-5-5zM9 18a3 3 0 0 0 6 0",rules:"M4 6h16M4 12h16M4 18h10",ev:"M20 12v8H4v-8M2 8h20v4H2zM12 8v12",fx:"M4 4h16v16H4zM8 9h8M8 14h5",sync:"M20 12a8 8 0 1 1-2.3-5.6M20 4v4h-4",bk:"M12 3v12m0 0 4-4m-4 4-4-4M4 17v2h16v-2",dup:"M8 8h10v10H8zM6 16H4V4h12v2",lock:"M6 11h12v9H6zM9 11V8a3 3 0 0 1 6 0v3",cat:"M4 7h16M4 12h10M4 17h7",hol:"M4 6h16v14H4zM8 3v4M16 3v4",more:"M5 12h.01M12 12h.01M19 12h.01"};
+  const TABS=[["home","홈"],["list","내역"],["stats","통계"],["card","카드"],["asset","자산"],["more","더보기"]];
   function setTab(t){tab=t;sub="";imp=null;bimp=null;queue=[];qMsg="";ls.set("ledger_tab",t);window.scrollTo(0,0);render();}
   function setScope(s){scope=s;ls.set("ledger_scope",s);render();}
   function render(){
     if(!$("scrim").hidden)return;
     $("nav").replaceChildren(...TABS.map(([id,n])=>{const s=sv("svg",{viewBox:"0 0 24 24","aria-hidden":"true"});s.append(sv("path",{d:ICON[id]}));
       return h("button",{type:"button","aria-current":id===tab?"page":null,onclick:()=>setTab(id)},s,n);}));
-    const monthly=tab==="home"||tab==="list",scoped=monthly||(tab==="more"&&sub==="fx");
+    const monthly=tab==="home"||tab==="list"||tab==="stats",scoped=monthly||(tab==="more"&&sub==="fx");
     $("scope").hidden=!scoped;$("mnav").hidden=!(monthly||(tab==="more"&&sub==="fx"));$("fab").hidden=!(ready&&monthly);
     const ab=$("alerts");ab.hidden=!(ready&&monthly);
     if(!ab.hidden){const n=alertPend().length;
@@ -1865,7 +2441,7 @@ body.locked>*:not(#lock){visibility:hidden}
       h("button",{class:"marr",type:"button","aria-label":"다음 달",onclick:()=>{ym=shiftYM(ym,1);render();}},"›"));
     let P;
     if(!ready)P=[h("section",{class:"card"},h("p",{class:"empty",text:mode==="slow"?"기록을 아직 불러오지 못했어요. 연결되면 바로 보여 드릴게요.":"기록을 불러오는 중이에요…"}))];
-    else if(tab==="home")P=viewHome();else if(tab==="list")P=viewList();
+    else if(tab==="home")P=viewHome();else if(tab==="list")P=viewList();else if(tab==="stats")P=viewStats();
     else if(tab==="card")P=viewCard();
     else if(tab==="asset")P=viewAsset();
     else P=viewMore();
@@ -1899,7 +2475,7 @@ body.locked>*:not(#lock){visibility:hidden}
     // ③ 예전 localStorage 기록을 IndexedDB로 옮겨 둡니다(옮긴 뒤에도 원본 사본은 지우지 않아요).
     if(moved){try{await saveState();ls.set("ledger_migrated",JSON.stringify({at:new Date().toISOString(),tx:liveCounts().tx}));dirty.clear();toast("예전 기록을 새 저장 방식으로 옮겼어요");}
       catch(e){store=probeLS()?"ls":"none";saveErr=true;saveErrMsg="예전 기록을 IndexedDB로 옮기지 못해 "+(store==="ls"?"예전 방식으로 계속 저장해요.":"이 화면에만 남겨 둘 수밖에 없어요.");setStatus();drawSaveAlert();}}
-    setTimeout(()=>fetchAlerts(false),600);}
+    setTimeout(()=>fetchAlerts(false),600);setTimeout(syncBoot,700);}
   render();
   (async()=>{
     // 브라우저가 저장소를 임의로 정리하지 않도록 영구 저장을 요청합니다(허용되지 않아도 그대로 씁니다).
